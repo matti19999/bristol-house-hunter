@@ -1,0 +1,4 @@
+# Never upload these. .env holds your Gmail app password.
+.env
+__pycache__/
+hunter.log

@@ -1,0 +1,37 @@
+# House Hunter settings. Edit these, save, and the next run picks them up.
+
+[budget]
+# Max rent per person per week (bills NOT included).
+max_pppw = 185
+# Listings that include bills are allowed to be a bit higher, because you
+# won't pay gas/electric/wifi on top (~£15-20 pppw in Bristol).
+max_pppw_bills_included = 200
+
+[property]
+bedrooms = [2, 3, 4]
+
+[location]
+# Senate House / Tyndall Avenue, University of Bristol
+uni_lat = 51.4585
+uni_lon = -2.6027
+# Walking time is estimated from straight-line distance x 1.3 (streets aren't
+# straight, and Bristol is hilly) at 4.8 km/h. 25 min covers Clifton, Redland,
+# Cotham, Kingsdown, Hotwells, Stokes Croft and Montpelier.
+max_walk_minutes = 25
+# Used only for UniHomes, which doesn't publish coordinates.
+area_names = [
+  "clifton", "redland", "cotham", "kingsdown", "hotwells", "montpelier",
+  "stokes croft", "st pauls", "st paul's", "tyndall", "city centre",
+  "near university of bristol", "harbourside", "spike island", "st michael",
+  "whiteladies", "st andrews", "arley hill",
+]
+# UniHomes area pages to check (from unihomes.co.uk/student-accommodation/bristol/<name>)
+unihomes_areas = [
+  "clifton", "redland", "cotham-kingsdown", "city-centre", "st-pauls",
+  "stokes-croft", "montpelier", "st-andrews",
+]
+
+[schedule]
+# Minutes between checks when running with --loop. Don't go below ~5, or the
+# sites may start blocking you.
+interval_minutes = 10
