@@ -69,7 +69,8 @@
   "OpenRent:2973647": "2026-09-24T23:37:45+00:00",
   "AccommodationForStudents:309772": "2026-09-24T23:37:45+00:00",
   "UniHomes:1708065978": "2026-09-24T23:37:45+00:00",
-  "Rightmove:93552006": "2026-09-25T00:00:00+00:00"
+  "Rightmove:93552006": "2026-09-25T00:00:00+00:00",
+  "Rightmove:90264384": "2026-09-25T00:41:50+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -87,7 +88,7 @@
    "bills_included": false,
    "address": "Britannia Buildings, Merchants Road, Hotwells, Bristol, BS8",
    "walk_min": 25,
-   "note": "",
+   "note": "available 02 Oct 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "Rightmove:90264384": {
@@ -99,8 +100,8 @@
    "bills_included": false,
    "address": "Waterloo Street, Clifton, BS8",
    "walk_min": 21,
-   "note": "",
-   "first_seen": "2026-09-24T23:37:45+00:00"
+   "note": "available 01 Sep 2026",
+   "first_seen": "2026-09-25T00:41:50+00:00"
   },
   "Rightmove:92724843": {
    "source": "Rightmove",
@@ -111,7 +112,7 @@
    "bills_included": false,
    "address": "Dairycroft, Hepburn Road, Bristol, BS2",
    "walk_min": 18,
-   "note": "",
+   "note": "available 09 Oct 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "Rightmove:93354078": {
@@ -123,7 +124,7 @@
    "bills_included": false,
    "address": "Normanton Road, Clifton, Bristol, BS8",
    "walk_min": 24,
-   "note": "",
+   "note": "available 19 Sep 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "Rightmove:91850529": {
@@ -135,7 +136,7 @@
    "bills_included": false,
    "address": "Portland Street, Clifton, Bristol",
    "walk_min": 23,
-   "note": "",
+   "note": "available 05 Oct 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "Rightmove:77154620": {
@@ -159,7 +160,7 @@
    "bills_included": false,
    "address": "Redcliff Street, Bristol, BS1",
    "walk_min": 21,
-   "note": "",
+   "note": "available 06 Sep 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "Rightmove:89014446": {
@@ -183,7 +184,7 @@
    "bills_included": false,
    "address": "Worcester Terrace, Bristol",
    "walk_min": 17,
-   "note": "",
+   "note": "available 08 Aug 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "AccommodationForStudents:309772": {
@@ -195,7 +196,7 @@
    "bills_included": true,
    "address": "Redcliff Street, City Centre",
    "walk_min": 21,
-   "note": "2026-27",
+   "note": "for 2026-27",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "UniHomes:1708065978": {
@@ -207,7 +208,7 @@
    "bills_included": true,
    "address": "Walsingham Road, St Andrew's",
    "walk_min": null,
-   "note": "",
+   "note": "available from 30th sep",
    "first_seen": "2026-09-24T23:37:45+00:00"
   }
  }
