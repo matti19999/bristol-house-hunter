@@ -139,7 +139,8 @@ def rightmove(cfg, first_run, seen):
     base = ("https://www.rightmove.co.uk/property-to-rent/find.html"
             "?locationIdentifier=REGION%5E219"  # Bristol
             f"&minBedrooms={min(beds)}&maxBedrooms={max(beds)}&maxPrice={max_pcm(cfg)}"
-            "&sortType=6&dontShow=houseShare%2Cretirement&index={index}")
+            # mustHave=student: only lets the agent has marked as student properties
+            "&sortType=6&mustHave=student&dontShow=houseShare%2Cretirement&index={index}")
     max_pages = 42 if first_run else 4
     out = []
     for page in range(max_pages):
@@ -158,12 +159,15 @@ def rightmove(cfg, first_run, seen):
                 continue
             weekly = to_weekly(p["price"]["amount"], p["price"].get("frequency"))
             loc = p.get("location") or {}
+            avail = p.get("letAvailableDate")
             out.append(Listing(
                 source="Rightmove", id=str(p["id"]),
                 url="https://www.rightmove.co.uk/properties/" + str(p["id"]),
                 beds=n, pppw=weekly / n, bills_included=False,
                 address=p.get("displayAddress", ""),
                 walk_min=walk_minutes(cfg, loc.get("latitude"), loc.get("longitude")),
+                note=(f"available {datetime.fromisoformat(avail.replace('Z', '+00:00')):%d %b %Y}"
+                      if avail else ""),
             ))
         # Results are newest-first, so once a whole page is old news, stop.
         if not first_run and new_on_page == 0:
@@ -242,7 +246,7 @@ def accommodation_for_students(cfg, first_run, seen):
                         address=", ".join(x for x in (a.get("address2") or a.get("address1"),
                                                       a.get("area")) if x),
                         walk_min=walk_minutes(cfg, c.get("lat"), c.get("lon")),
-                        note=p.get("academicYearLabel", ""),
+                        note=f"for {p['academicYearLabel']}" if p.get("academicYearLabel") else "",
                     ))
             page_no += 1
     return out
@@ -275,19 +279,23 @@ def unihomes(cfg, first_run, seen):
             if not pr:
                 continue
             addr = re.search(r"\d+ Bedroom \w+ (.+?)(?: Bills included| £|$)", text, re.I)
+            avail = re.search(r"available (immediately|from \d+\w* \w+(?: \d{4})?)", text, re.I)
             out.append(Listing(
                 source="UniHomes", id=pid, url=a["href"] if a["href"].startswith("http")
                 else "https://www.unihomes.co.uk" + a["href"],
                 beds=n, pppw=float(pr.group(1).replace(",", "")),
                 bills_included="bills included" in text.lower(),
                 address=addr.group(1) if addr else area.title(),
+                note=f"available {avail.group(1).lower()}" if avail else "",
             ))
     return out
 
 
 SOURCES = {
     "Rightmove": rightmove,
-    "OpenRent": openrent,
+    # OpenRent is off: it has no student-let category (only "students welcome"),
+    # and it blocks GitHub's servers. Uncomment to turn it back on.
+    # "OpenRent": openrent,
     "AccommodationForStudents": accommodation_for_students,
     "UniHomes": unihomes,
 }
