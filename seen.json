@@ -77,7 +77,7 @@
   "Rightmove": 0,
   "OpenRent": 1,
   "AccommodationForStudents": 0,
-  "UniHomes": 1
+  "UniHomes": 0
  },
  "matches": {
   "Rightmove:91952553": {
@@ -209,7 +209,7 @@
    "bills_included": true,
    "address": "Walsingham Road, St Andrew's",
    "walk_min": null,
-   "note": "available from 30th september 2026",
+   "note": "available from 30th sep",
    "first_seen": "2026-09-24T23:37:45+00:00"
   },
   "AccommodationForStudents:300568": {
