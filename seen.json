@@ -70,7 +70,8 @@
   "AccommodationForStudents:309772": "2026-09-24T23:37:45+00:00",
   "UniHomes:1708065978": "2026-09-24T23:37:45+00:00",
   "Rightmove:93552006": "2026-09-25T00:00:00+00:00",
-  "Rightmove:90264384": "2026-09-25T00:41:50+00:00"
+  "Rightmove:90264384": "2026-09-25T00:41:50+00:00",
+  "AccommodationForStudents:300568": "2026-09-25T10:28:41+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -208,8 +209,20 @@
    "bills_included": true,
    "address": "Walsingham Road, St Andrew's",
    "walk_min": null,
-   "note": "available from 30th sep",
+   "note": "available from 30th september 2026",
    "first_seen": "2026-09-24T23:37:45+00:00"
+  },
+  "AccommodationForStudents:300568": {
+   "source": "AccommodationForStudents",
+   "id": "300568",
+   "url": "https://www.accommodationforstudents.com/property/300568-3-bed-house-redland-bristol",
+   "beds": 3,
+   "pppw": 199.97,
+   "bills_included": true,
+   "address": "Whiteladies Road, Redland",
+   "walk_min": 19,
+   "note": "for 2026-27",
+   "first_seen": "2026-09-25T10:28:41+00:00"
   }
  }
 }
