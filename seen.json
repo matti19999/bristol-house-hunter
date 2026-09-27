@@ -74,7 +74,7 @@
   "AccommodationForStudents:300568": "2026-09-25T10:28:41+00:00"
  },
  "failures": {
-  "Rightmove": 0,
+  "Rightmove": 1,
   "OpenRent": 1,
   "AccommodationForStudents": 0,
   "UniHomes": 0
