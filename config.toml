@@ -10,6 +10,11 @@ max_pppw_bills_included = 200
 [property]
 bedrooms = [2, 3, 4]
 
+[availability]
+# Only places for the 2027/28 year: available from this date onwards, or whose
+# listing says "2027/28", "September 2027" etc.
+from_date = "2027-06-01"
+
 [location]
 # Senate House / Tyndall Avenue, University of Bristol
 uni_lat = 51.4585

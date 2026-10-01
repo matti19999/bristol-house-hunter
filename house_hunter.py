@@ -122,6 +122,19 @@ def max_pcm(cfg):
                      * max(cfg["property"]["bedrooms"]) * WEEKS_PER_MONTH)
 
 
+def for_target_year(cfg, date=None, text=""):
+    """True if a listing is for the academic year starting in from_date's year:
+    its available date is on/after from_date, or its text says e.g. "2027/28",
+    "27-28" or "September 2027" (but not "2026-2027")."""
+    start = cfg["availability"]["from_date"]
+    if date and date[:10] >= start:
+        return True
+    y = int(start[:4])
+    pattern = (rf"\b(?:20)?{y % 100}\s*[-/–]\s*(?:20)?{(y + 1) % 100}\b"
+               rf"|\b(?:jun|jul|aug|sep|oct)[a-z]*\.?\s+{y}\b")
+    return bool(re.search(pattern, text, re.I))
+
+
 def to_weekly(amount, frequency):
     return {
         "weekly": amount,
@@ -157,9 +170,15 @@ def rightmove(cfg, first_run, seen):
             n = p.get("bedrooms") or 0
             if n not in beds:
                 continue
+            avail = p.get("letAvailableDate")
+            features = [f.get("description", "") if isinstance(f, dict) else str(f)
+                        for f in p.get("keyFeatures") or []]
+            text = " ".join([p.get("summary") or "", p.get("heading") or "",
+                             p.get("displayAddress") or ""] + features)
+            if not for_target_year(cfg, avail, text):
+                continue
             weekly = to_weekly(p["price"]["amount"], p["price"].get("frequency"))
             loc = p.get("location") or {}
-            avail = p.get("letAvailableDate")
             out.append(Listing(
                 source="Rightmove", id=str(p["id"]),
                 url="https://www.rightmove.co.uk/properties/" + str(p["id"]),
@@ -235,6 +254,15 @@ def accommodation_for_students(cfg, first_run, seen):
                     # Whole property only: every room must still be free.
                     if n not in beds or occ.get("available", 0) < n or p.get("isSoldOut"):
                         continue
+                    starts = sorted(c["startDate"] for c in p.get("contracts") or []
+                                    if c.get("startDate") and for_target_year(cfg, c["startDate"]))
+                    label = p.get("academicYearLabel") or ""
+                    if starts:
+                        note = f"tenancy from {datetime.fromisoformat(starts[0][:10]):%d %b %Y}"
+                    elif for_target_year(cfg, text=label):
+                        note = f"for {label}"
+                    else:
+                        continue
                     terms = p.get("terms") or {}
                     a = p.get("address") or {}
                     c = p.get("coordinates") or {}
@@ -246,7 +274,7 @@ def accommodation_for_students(cfg, first_run, seen):
                         address=", ".join(x for x in (a.get("address2") or a.get("address1"),
                                                       a.get("area")) if x),
                         walk_min=walk_minutes(cfg, c.get("lat"), c.get("lon")),
-                        note=f"for {p['academicYearLabel']}" if p.get("academicYearLabel") else "",
+                        note=note,
                     ))
             page_no += 1
     return out
@@ -276,7 +304,7 @@ def unihomes(cfg, first_run, seen):
                 card = card.parent
             text = " ".join(card.get_text(" ", strip=True).split())
             pr = re.search(r"£\s*([\d,]+(?:\.\d+)?)\s*(?:pppw|per person per week)", text)
-            if not pr:
+            if not pr or not for_target_year(cfg, text=text):
                 continue
             addr = re.search(r"\d+ Bedroom \w+ (.+?)(?: Bills included| £|$)", text, re.I)
             avail = re.search(r"available (immediately|from \d+\w* \w+(?: \d{4})?)", text, re.I)
