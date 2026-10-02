@@ -71,7 +71,16 @@
   "UniHomes:1708065978": "2026-09-24T23:37:45+00:00",
   "Rightmove:93552006": "2026-09-25T00:00:00+00:00",
   "Rightmove:90264384": "2026-09-25T00:41:50+00:00",
-  "AccommodationForStudents:300568": "2026-09-25T10:28:41+00:00"
+  "AccommodationForStudents:300568": "2026-09-25T10:28:41+00:00",
+  "Rightmove:93878652": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878655": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878682": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878685": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878646": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878631": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878634": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878637": "2026-10-02T19:24:40+00:00",
+  "Rightmove:93878640": "2026-10-02T19:24:40+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -79,5 +88,114 @@
   "AccommodationForStudents": 0,
   "UniHomes": 0
  },
- "matches": {}
+ "matches": {
+  "Rightmove:93878652": {
+   "source": "Rightmove",
+   "id": "93878652",
+   "url": "https://www.rightmove.co.uk/properties/93878652",
+   "beds": 4,
+   "pppw": 65.0,
+   "bills_included": false,
+   "address": "5 There and Back Again Lane BS8 1HN",
+   "walk_min": 6,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878655": {
+   "source": "Rightmove",
+   "id": "93878655",
+   "url": "https://www.rightmove.co.uk/properties/93878655",
+   "beds": 4,
+   "pppw": 65.0,
+   "bills_included": false,
+   "address": "Basement Flat, 30, Whiteladies Road BS8 2LG",
+   "walk_min": 9,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878682": {
+   "source": "Rightmove",
+   "id": "93878682",
+   "url": "https://www.rightmove.co.uk/properties/93878682",
+   "beds": 3,
+   "pppw": 81.66666666666667,
+   "bills_included": false,
+   "address": "Flat 1, 31, St Nicholas Street BS1 1TP",
+   "walk_min": 13,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878685": {
+   "source": "Rightmove",
+   "id": "93878685",
+   "url": "https://www.rightmove.co.uk/properties/93878685",
+   "beds": 4,
+   "pppw": 60.0,
+   "bills_included": false,
+   "address": "Flat 2, 31, St Nicholas Street BS1 1TP",
+   "walk_min": 13,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878646": {
+   "source": "Rightmove",
+   "id": "93878646",
+   "url": "https://www.rightmove.co.uk/properties/93878646",
+   "beds": 3,
+   "pppw": 91.66666666666667,
+   "bills_included": false,
+   "address": "Flat 5, 83/85, Park Street BS1 5PJ",
+   "walk_min": 6,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878631": {
+   "source": "Rightmove",
+   "id": "93878631",
+   "url": "https://www.rightmove.co.uk/properties/93878631",
+   "beds": 3,
+   "pppw": 86.66666666666667,
+   "bills_included": false,
+   "address": "Flat 1, 83/85, Park Street BS1 5PJ",
+   "walk_min": 6,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878634": {
+   "source": "Rightmove",
+   "id": "93878634",
+   "url": "https://www.rightmove.co.uk/properties/93878634",
+   "beds": 4,
+   "pppw": 58.75,
+   "bills_included": false,
+   "address": "Flat 2, 83/85, Park Street BS1 5PJ",
+   "walk_min": 6,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878637": {
+   "source": "Rightmove",
+   "id": "93878637",
+   "url": "https://www.rightmove.co.uk/properties/93878637",
+   "beds": 3,
+   "pppw": 88.33333333333333,
+   "bills_included": false,
+   "address": "Flat 3, 83/85, Park Street BS1 5PJ",
+   "walk_min": 6,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  },
+  "Rightmove:93878640": {
+   "source": "Rightmove",
+   "id": "93878640",
+   "url": "https://www.rightmove.co.uk/properties/93878640",
+   "beds": 3,
+   "pppw": 86.66666666666667,
+   "bills_included": false,
+   "address": "Flat 4, 83/85, Park Street BS1 5PJ",
+   "walk_min": 6,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-02T19:24:40+00:00"
+  }
+ }
 }
