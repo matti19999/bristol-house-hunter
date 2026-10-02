@@ -1,0 +1,14 @@
+# A one-off search. Uploading a change to this file makes GitHub run it once
+# and email you the results as a single list. Leave a setting out (or set it
+# to 0 / "") for "no limit".
+
+[report]
+title = "Student 4 beds within 20 min of Senate House"
+description = "All current student 4-bed lets within about a 20-minute walk of Senate House, any price, any start date"
+bedrooms = [4]
+max_walk_minutes = 20
+max_pppw = 0                 # 0 = any price
+max_pppw_bills_included = 0
+from_date = ""               # "" = any start date; "2027-06-01" = 2027/28 only
+# UniHomes doesn't publish exact locations, so it's limited to these areas
+unihomes_areas = ["clifton", "cotham-kingsdown"]

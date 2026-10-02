@@ -1,0 +1,30 @@
+# Runs the one-off search in report_request.toml and emails the results,
+# whenever that file is changed (or when you press "Run workflow").
+
+name: One-off search
+
+on:
+  push:
+    paths: [report_request.toml]
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Search and email the results
+        run: python house_hunter.py --report report_request.toml
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}

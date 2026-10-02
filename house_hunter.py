@@ -127,6 +127,8 @@ def for_target_year(cfg, date=None, text=""):
     its available date is on/after from_date, or its text says e.g. "2027/28",
     "27-28" or "September 2027" (but not "2026-2027")."""
     start = cfg["availability"]["from_date"]
+    if not start:  # blank from_date means any year
+        return True
     if date and date[:10] >= start:
         return True
     y = int(start[:4])
@@ -149,9 +151,11 @@ def to_weekly(amount, frequency):
 
 def rightmove(cfg, first_run, seen):
     beds = cfg["property"]["bedrooms"]
+    # Rightmove rejects absurd prices, so "no limit" means leaving it out.
+    price = f"&maxPrice={max_pcm(cfg)}" if max_pcm(cfg) <= 40000 else ""
     base = ("https://www.rightmove.co.uk/property-to-rent/find.html"
             "?locationIdentifier=REGION%5E219"  # Bristol
-            f"&minBedrooms={min(beds)}&maxBedrooms={max(beds)}&maxPrice={max_pcm(cfg)}"
+            f"&minBedrooms={min(beds)}&maxBedrooms={max(beds)}{price}"
             # mustHave=student: only lets the agent has marked as student properties
             "&sortType=6&mustHave=student&dontShow=houseShare%2Cretirement&index={index}")
     max_pages = 42 if first_run else 4
@@ -483,13 +487,58 @@ def check(cfg, dry_run=False):
         STATE_FILE.write_text(json.dumps(state, indent=1), encoding="utf-8")
 
 
+def report(request_file, dry_run=False):
+    """One-off search from a request file: emails every current match in a
+    single email. Doesn't touch seen.json, so the regular alerts are unaffected."""
+    cfg = load_config()
+    with Path(request_file).open("rb") as f:
+        req = tomllib.load(f)["report"]
+    unlimited = 9999
+    cfg["property"]["bedrooms"] = req.get("bedrooms", cfg["property"]["bedrooms"])
+    cfg["location"]["max_walk_minutes"] = req.get("max_walk_minutes", unlimited)
+    cfg["budget"]["max_pppw"] = req.get("max_pppw") or unlimited
+    cfg["budget"]["max_pppw_bills_included"] = req.get("max_pppw_bills_included") or unlimited
+    cfg["availability"]["from_date"] = req.get("from_date", "")
+    if "unihomes_areas" in req:  # UniHomes has no coordinates, so filter by area
+        cfg["location"]["unihomes_areas"] = req["unihomes_areas"]
+        cfg["location"]["area_names"] = [a.replace("-", " ") for a in req["unihomes_areas"]]
+
+    found, failed = [], []
+    for name, fn in SOURCES.items():
+        try:
+            results = [l for l in fn(cfg, True, {}) if matches(cfg, l)]
+            log(f"report: {name}: {len(results)} matching")
+            found += results
+        except Exception as e:
+            failed.append(name)
+            log(f"report: {name} FAILED: {e!r}")
+    found = sorted({l.key: l for l in found}.values(), key=lambda l: (l.pppw, l.walk_min or 99))
+
+    title = req.get("title", "House search results")
+    intro = (f"{req.get('description', title)}: {len(found)} found, cheapest first."
+             if found else f"{req.get('description', title)}: nothing found right now.")
+    if failed:
+        intro += f" Note: {' and '.join(failed)} couldn't be checked this time."
+    ok = send_email(f"{title}: {len(found)} found", *listings_email(found, intro),
+                    dry_run=dry_run)
+    log(f"report: {'emailed' if ok else 'EMAIL FAILED for'} {len(found)} listings")
+    if not ok:
+        sys.exit(1)
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--report", metavar="REQUEST_FILE",
+                    help="one-off search described in REQUEST_FILE, emailed as one list")
     ap.add_argument("--loop", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--test-email", action="store_true")
     args = ap.parse_args()
     load_env()
+
+    if args.report:
+        report(args.report, dry_run=args.dry_run)
+        return
 
     if args.test_email:
         ok = send_email("House hunter test", "Emails are working. You're all set.")
