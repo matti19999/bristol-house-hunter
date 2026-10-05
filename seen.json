@@ -81,7 +81,8 @@
   "Rightmove:93878634": "2026-10-02T19:24:40+00:00",
   "Rightmove:93878637": "2026-10-02T19:24:40+00:00",
   "Rightmove:93878640": "2026-10-02T19:24:40+00:00",
-  "Rightmove:93878625": "2026-10-05T14:37:21+00:00"
+  "Rightmove:93878625": "2026-10-05T14:37:21+00:00",
+  "Rightmove:91632648": "2026-10-05T15:24:20+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -209,6 +210,18 @@
    "walk_min": 23,
    "note": "available 05 Jul 2027",
    "first_seen": "2026-10-05T14:37:21+00:00"
+  },
+  "Rightmove:91632648": {
+   "source": "Rightmove",
+   "id": "91632648",
+   "url": "https://www.rightmove.co.uk/properties/91632648",
+   "beds": 2,
+   "pppw": 110.0,
+   "bills_included": false,
+   "address": "Flat 2, 7, Cromwell Road BS6 5HD",
+   "walk_min": 23,
+   "note": "available 05 Jul 2027",
+   "first_seen": "2026-10-05T15:24:20+00:00"
   }
  }
 }
