@@ -2,13 +2,15 @@
 
 [budget]
 # Max rent per person per week (bills NOT included).
-max_pppw = 185
+max_pppw = 210
 # Listings that include bills are allowed to be a bit higher, because you
 # won't pay gas/electric/wifi on top (~£15-20 pppw in Bristol).
-max_pppw_bills_included = 200
+max_pppw_bills_included = 225
 
 [property]
-bedrooms = [2, 5, 6, 7, 8]
+bedrooms = [5, 6]
+# Listings that don't say how many bathrooms are still emailed, marked "bathrooms not stated".
+min_bathrooms = 2
 
 [availability]
 # Only places for the 2027/28 year: available from this date onwards, or whose

@@ -55,6 +55,7 @@ class Listing:
     address: str
     walk_min: int | None = None
     note: str = ""
+    bathrooms: int | None = None  # None = the listing doesn't say
 
     @property
     def key(self):
@@ -204,6 +205,7 @@ def rightmove(cfg, first_run, seen):
                 source="Rightmove", id=str(p["id"]),
                 url="https://www.rightmove.co.uk/properties/" + str(p["id"]),
                 beds=n, pppw=weekly / n, bills_included=False,
+                bathrooms=p.get("bathrooms") or None,
                 address=p.get("displayAddress", ""),
                 walk_min=walk_minutes(cfg, loc.get("latitude"), loc.get("longitude")),
                 note=(f"available {datetime.fromisoformat(avail.replace('Z', '+00:00')):%d %b %Y}"
@@ -296,6 +298,7 @@ def accommodation_for_students(cfg, first_run, seen):
                         source="AccommodationForStudents", id=str(p["id"]),
                         url="https://www.accommodationforstudents.com" + p["url"],
                         beds=n, pppw=float(terms["rentPpw"]["value"]),
+                        bathrooms=p.get("numberOfBathrooms") or None,
                         bills_included=terms.get("billsIncluded") == "all",
                         address=", ".join(x for x in (a.get("address2") or a.get("address1"),
                                                       a.get("area")) if x),
@@ -332,12 +335,14 @@ def unihomes(cfg, first_run, seen):
             pr = re.search(r"£\s*([\d,]+(?:\.\d+)?)\s*(?:pppw|per person per week)", text)
             if not pr or not for_target_year(cfg, text=text):
                 continue
+            baths = re.search(r"(\d+)\s*bathroom", text, re.I)
             addr = re.search(r"\d+ Bedroom \w+ (.+?)(?: Bills included| £|$)", text, re.I)
             avail = re.search(r"available (immediately|from \d+\w* \w+(?: \d{4})?)", text, re.I)
             out.append(Listing(
                 source="UniHomes", id=pid, url=a["href"] if a["href"].startswith("http")
                 else "https://www.unihomes.co.uk" + a["href"],
                 beds=n, pppw=float(pr.group(1).replace(",", "")),
+                bathrooms=int(baths.group(1)) if baths else None,
                 bills_included="bills included" in text.lower(),
                 address=addr.group(1) if addr else area.title(),
                 note=f"available {avail.group(1).lower()}" if avail else "",
@@ -364,6 +369,9 @@ def matches(cfg, l: Listing):
         return False
     if l.walk_min is not None and l.walk_min > cfg["location"]["max_walk_minutes"]:
         return False
+    # Listings that don't say how many bathrooms are kept (and flagged in the email).
+    if l.bathrooms is not None and l.bathrooms < cfg["property"].get("min_bathrooms", 0):
+        return False
     return True
 
 
@@ -372,7 +380,8 @@ def matches(cfg, l: Listing):
 def describe(l: Listing):
     bills = " incl. bills" if l.bills_included else ""
     walk = f" · {l.walk_min} min walk" if l.walk_min is not None else ""
-    return f"{l.beds} bed · £{l.pppw:.0f} pppw{bills}{walk}"
+    baths = (f" · {l.bathrooms} bath" if l.bathrooms else " · bathrooms not stated")
+    return f"{l.beds} bed{baths} · £{l.pppw:.0f} pppw{bills}{walk}"
 
 
 def listings_email(listings, intro):
