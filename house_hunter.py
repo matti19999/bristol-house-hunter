@@ -149,6 +149,23 @@ def to_weekly(amount, frequency):
 
 # ---------------------------------------------------------------- sources
 
+# Anything cheaper than this per person per week near the university is a pricing
+# mix-up (e.g. a per-room price listed as if it were the whole house), not a bargain.
+MIN_PLAUSIBLE_PPPW = 90
+
+
+def check_rightmove_page(l: Listing, amount):
+    """Some agents list rent per person rather than for the whole property, and
+    only say so on the listing page. Fix the price (and bills) if so."""
+    text = BeautifulSoup(get(l.url), "html.parser").get_text(" ", strip=True)
+    per_person = [float(n.replace(",", "")) for n in re.findall(
+        r"£\s*([\d,]+(?:\.\d+)?)\s*(?:per person,? per week|pppw|pp ?pw)", text, re.I)]
+    if amount in per_person:
+        l.pppw = amount
+    if re.search(r"bills (?:are )?included|inclusive of (?:all )?(?:bills|utilities)", text, re.I):
+        l.bills_included = True
+
+
 def rightmove(cfg, first_run, seen):
     beds = cfg["property"]["bedrooms"]
     # Rightmove rejects absurd prices, so "no limit" means leaving it out.
@@ -183,7 +200,7 @@ def rightmove(cfg, first_run, seen):
                 continue
             weekly = to_weekly(p["price"]["amount"], p["price"].get("frequency"))
             loc = p.get("location") or {}
-            out.append(Listing(
+            l = Listing(
                 source="Rightmove", id=str(p["id"]),
                 url="https://www.rightmove.co.uk/properties/" + str(p["id"]),
                 beds=n, pppw=weekly / n, bills_included=False,
@@ -191,7 +208,12 @@ def rightmove(cfg, first_run, seen):
                 walk_min=walk_minutes(cfg, loc.get("latitude"), loc.get("longitude")),
                 note=(f"available {datetime.fromisoformat(avail.replace('Z', '+00:00')):%d %b %Y}"
                       if avail else ""),
-            ))
+            )
+            # Only open the full page for would-be matches and suspiciously cheap
+            # ones (ones already seen were checked when they were new).
+            if l.key not in seen and (l.pppw < MIN_PLAUSIBLE_PPPW or matches(cfg, l)):
+                check_rightmove_page(l, float(p["price"]["amount"]))
+            out.append(l)
         # Results are newest-first, so once a whole page is old news, stop.
         if not first_run and new_on_page == 0:
             break
@@ -336,6 +358,8 @@ SOURCES = {
 # ---------------------------------------------------------------- filtering
 
 def matches(cfg, l: Listing):
+    if l.pppw < MIN_PLAUSIBLE_PPPW:
+        return False
     if l.pppw > max_pppw(cfg, l.bills_included):
         return False
     if l.walk_min is not None and l.walk_min > cfg["location"]["max_walk_minutes"]:
