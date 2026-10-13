@@ -8,7 +8,7 @@ max_pppw = 185
 max_pppw_bills_included = 200
 
 [property]
-bedrooms = [2, 3, 4]
+bedrooms = [2, 5, 6, 7, 8]
 
 [availability]
 # Only places for the 2027/28 year: available from this date onwards, or whose

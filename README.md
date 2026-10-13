@@ -2,7 +2,7 @@
 
 Every 10 minutes, GitHub checks **Rightmove** (student lets only),
 **AccommodationForStudents** and **UniHomes** for **student** houses and flats
-with **2, 3 or 4 bedrooms**, within about a **25-minute walk of Senate House**.
+with **2 or 5–8 bedrooms**, within about a **25-minute walk of Senate House**.
 Only places for the **2027/28 year** count (available from June 2027, or listed
 as 2027/28). It keeps anything at or under **£185 per person per week** (£200 if bills are
 included) and **emails you** each new one with a link. It runs on GitHub's

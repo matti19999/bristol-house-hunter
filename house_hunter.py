@@ -454,11 +454,18 @@ def check(cfg, dry_run=False):
     first_run = state is None
     state = state or {"seen": {}, "failures": {}}
     seen = state["seen"]
+    # When the search criteria change, search everything once (not just the
+    # newest listings), so places listed earlier that now fit aren't missed.
+    search = json.dumps([cfg["property"], cfg["budget"], cfg["availability"],
+                         cfg["location"]["max_walk_minutes"]], sort_keys=True)
+    criteria_changed = not first_run and state.get("search") != search
+    state["search"] = search
+    full_sweep = first_run or criteria_changed
 
     found = []
     for name, fn in SOURCES.items():
         try:
-            results = fn(cfg, first_run, seen)
+            results = fn(cfg, full_sweep, seen)
             log(f"{name}: {len(results)} listings checked")
             found += results
             state["failures"][name] = 0
@@ -479,6 +486,8 @@ def check(cfg, dry_run=False):
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for l in new:
         seen[l.key] = now
+    if criteria_changed:  # drop old matches that no longer fit
+        state["matches"] = {}
     all_matches = state.setdefault("matches", {})
     for l in good:
         all_matches[l.key] = asdict(l) | {"first_seen": seen[l.key]}
@@ -496,6 +505,10 @@ def check(cfg, dry_run=False):
             subject = f"House hunter is running: {len(new)} places match right now"
             intro = (f"These {len(new)} places already match your search, cheapest first. "
                      f"From now on you'll get an email as soon as a new one is listed.")
+        elif criteria_changed:
+            subject = f"Search updated: {len(new)} places match your new criteria"
+            intro = (f"Your search criteria changed. These {len(new)} places match them, "
+                     f"cheapest first. New ones will be emailed as they're listed.")
         elif len(new) == 1:
             l = new[0]
             subject = f"New: {l.beds} bed £{l.pppw:.0f}pppw, {l.address}"
