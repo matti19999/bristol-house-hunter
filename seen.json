@@ -86,7 +86,18 @@
   "Rightmove:94214472": "2026-10-13T15:55:10+00:00",
   "Rightmove:93994296": "2026-10-13T15:55:10+00:00",
   "UniHomes:2023341703": "2026-10-13T15:55:10+00:00",
-  "UniHomes:913929914": "2026-10-13T15:55:10+00:00"
+  "UniHomes:913929914": "2026-10-13T15:55:10+00:00",
+  "Rightmove:94187148": "2026-10-13T23:41:33+00:00",
+  "Rightmove:93827586": "2026-10-13T23:41:33+00:00",
+  "Rightmove:93878688": "2026-10-13T23:41:33+00:00",
+  "Rightmove:91632735": "2026-10-13T23:41:33+00:00",
+  "AccommodationForStudents:302236": "2026-10-13T23:41:33+00:00",
+  "AccommodationForStudents:305522": "2026-10-13T23:41:33+00:00",
+  "AccommodationForStudents:305533": "2026-10-13T23:41:33+00:00",
+  "AccommodationForStudents:313754": "2026-10-13T23:41:33+00:00",
+  "AccommodationForStudents:305534": "2026-10-13T23:41:33+00:00",
+  "AccommodationForStudents:305517": "2026-10-13T23:41:33+00:00",
+  "UniHomes:1141827266": "2026-10-13T23:41:33+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -95,17 +106,18 @@
   "UniHomes": 0
  },
  "matches": {
-  "Rightmove:94214472": {
+  "Rightmove:94187148": {
    "source": "Rightmove",
-   "id": "94214472",
-   "url": "https://www.rightmove.co.uk/properties/94214472",
-   "beds": 7,
-   "pppw": 161.53846153846158,
-   "bills_included": false,
-   "address": "St. Andrews, Cromwell Road, BS6 5HB",
-   "walk_min": 24,
-   "note": "available 14 Jul 2027",
-   "first_seen": "2026-10-13T15:55:10+00:00"
+   "id": "94187148",
+   "url": "https://www.rightmove.co.uk/properties/94187148",
+   "beds": 6,
+   "pppw": 204.23076923076925,
+   "bills_included": true,
+   "address": "First Floor Flat, St Nicholas Street, City Centre, Bristol, Bristol City",
+   "walk_min": 14,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
   },
   "Rightmove:93994296": {
    "source": "Rightmove",
@@ -117,7 +129,125 @@
    "address": "Montpelier, Shaftesbury Avenue, BS6 5LY",
    "walk_min": 22,
    "note": "available 30 Jul 2027",
+   "bathrooms": 2,
    "first_seen": "2026-10-13T15:55:10+00:00"
+  },
+  "Rightmove:93827586": {
+   "source": "Rightmove",
+   "id": "93827586",
+   "url": "https://www.rightmove.co.uk/properties/93827586",
+   "beds": 6,
+   "pppw": 220.0,
+   "bills_included": true,
+   "address": "Town House 5, 1, Mark Lane BS1 5DG",
+   "walk_min": 11,
+   "note": "available 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "Rightmove:93878688": {
+   "source": "Rightmove",
+   "id": "93878688",
+   "url": "https://www.rightmove.co.uk/properties/93878688",
+   "beds": 6,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "Flat 3, 31, St Nicholas Street BS1 1TP",
+   "walk_min": 13,
+   "note": "available 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "Rightmove:91632735": {
+   "source": "Rightmove",
+   "id": "91632735",
+   "url": "https://www.rightmove.co.uk/properties/91632735",
+   "beds": 5,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "Flat 3, 7, Cromwell Road BS6 5HD",
+   "walk_min": 23,
+   "note": "available 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "AccommodationForStudents:302236": {
+   "source": "AccommodationForStudents",
+   "id": "302236",
+   "url": "https://www.accommodationforstudents.com/property/302236-5-bed-house-kingsdown-bristol",
+   "beds": 5,
+   "pppw": 210.0,
+   "bills_included": true,
+   "address": "Stokes Croft, Kingsdown",
+   "walk_min": 16,
+   "note": "tenancy from 02 Jul 2027",
+   "bathrooms": 3,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "AccommodationForStudents:305522": {
+   "source": "AccommodationForStudents",
+   "id": "305522",
+   "url": "https://www.accommodationforstudents.com/property/305522-6-bed-house-city-centre-bristol",
+   "beds": 6,
+   "pppw": 220.0,
+   "bills_included": true,
+   "address": "Mark Lane, City Centre",
+   "walk_min": 11,
+   "note": "tenancy from 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "AccommodationForStudents:305533": {
+   "source": "AccommodationForStudents",
+   "id": "305533",
+   "url": "https://www.accommodationforstudents.com/property/305533-5-bed-flat-cotham-bristol",
+   "beds": 5,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "Cromwell Road, Cotham",
+   "walk_min": 23,
+   "note": "tenancy from 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "AccommodationForStudents:313754": {
+   "source": "AccommodationForStudents",
+   "id": "313754",
+   "url": "https://www.accommodationforstudents.com/property/313754-6-bed-flat-cotham-bristol",
+   "beds": 6,
+   "pppw": 220.0,
+   "bills_included": true,
+   "address": "Cromwell Road, Cotham",
+   "walk_min": 23,
+   "note": "tenancy from 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "AccommodationForStudents:305534": {
+   "source": "AccommodationForStudents",
+   "id": "305534",
+   "url": "https://www.accommodationforstudents.com/property/305534-6-bed-flat-cotham-bristol",
+   "beds": 6,
+   "pppw": 220.0,
+   "bills_included": true,
+   "address": "Cromwell Road, Cotham",
+   "walk_min": 23,
+   "note": "tenancy from 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
+  },
+  "AccommodationForStudents:305517": {
+   "source": "AccommodationForStudents",
+   "id": "305517",
+   "url": "https://www.accommodationforstudents.com/property/305517-6-bed-flat-city-centre-bristol",
+   "beds": 6,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "St Nicholas Street, City Centre",
+   "walk_min": 13,
+   "note": "tenancy from 05 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
   },
   "UniHomes:2023341703": {
    "source": "UniHomes",
@@ -129,20 +259,22 @@
    "address": "Shaftesbury Avenue, Redland",
    "walk_min": null,
    "note": "available from 30th july 2027",
+   "bathrooms": 2,
    "first_seen": "2026-10-13T15:55:10+00:00"
   },
-  "UniHomes:913929914": {
+  "UniHomes:1141827266": {
    "source": "UniHomes",
-   "id": "913929914",
-   "url": "https://www.unihomes.co.uk/property/913929914/bristol/st-andrews/7-bedroom-student-house/cromwell-road",
-   "beds": 7,
-   "pppw": 184.0,
+   "id": "1141827266",
+   "url": "https://www.unihomes.co.uk/property/1141827266/bristol/st-andrews/6-bedroom-student-house/cromwell-road-upper-flat",
+   "beds": 6,
+   "pppw": 223.0,
    "bills_included": true,
-   "address": "Cromwell Road, St Andrew's",
+   "address": "Cromwell Road (Upper Flat), St Andrew's",
    "walk_min": null,
-   "note": "available from 14th july 2027",
-   "first_seen": "2026-10-13T15:55:10+00:00"
+   "note": "available from 8th july 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-13T23:41:33+00:00"
   }
  },
- "search": "[{\"bedrooms\": [2, 5, 6, 7, 8]}, {\"max_pppw\": 185, \"max_pppw_bills_included\": 200}, {\"from_date\": \"2027-06-01\"}, 25]"
+ "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
 }
