@@ -107,7 +107,10 @@
   "Rightmove:94328718": "2026-10-15T01:18:39+00:00",
   "Rightmove:94372674": "2026-10-16T01:16:15+00:00",
   "Rightmove:94376703": "2026-10-16T08:17:17+00:00",
-  "Rightmove:94388061": "2026-10-16T10:44:37+00:00"
+  "Rightmove:94388061": "2026-10-16T10:44:37+00:00",
+  "Rightmove:94413690": "2026-10-16T16:44:12+00:00",
+  "Rightmove:94413666": "2026-10-16T16:44:12+00:00",
+  "Rightmove:94413756": "2026-10-16T16:44:12+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -414,6 +417,45 @@
    "note": "available 01 Jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-16T10:44:37+00:00"
+  },
+  "Rightmove:94413690": {
+   "source": "Rightmove",
+   "id": "94413690",
+   "url": "https://www.rightmove.co.uk/properties/94413690",
+   "beds": 6,
+   "pppw": 176.53846153846155,
+   "bills_included": false,
+   "address": "The Triangle (Flat 3), Clifton, Bristol, BS8",
+   "walk_min": 6,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-16T16:44:12+00:00"
+  },
+  "Rightmove:94413666": {
+   "source": "Rightmove",
+   "id": "94413666",
+   "url": "https://www.rightmove.co.uk/properties/94413666",
+   "beds": 5,
+   "pppw": 176.53846153846155,
+   "bills_included": false,
+   "address": "The Triangle (Flat 4), Clifton, Bristol, BS8",
+   "walk_min": 6,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-16T16:44:12+00:00"
+  },
+  "Rightmove:94413756": {
+   "source": "Rightmove",
+   "id": "94413756",
+   "url": "https://www.rightmove.co.uk/properties/94413756",
+   "beds": 5,
+   "pppw": 176.53846153846155,
+   "bills_included": false,
+   "address": "The Triangle (Flat 1), Clifton, Bristol, BS8",
+   "walk_min": 6,
+   "note": "available 02 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-16T16:44:12+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
