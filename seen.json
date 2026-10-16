@@ -106,7 +106,8 @@
   "Rightmove:94328712": "2026-10-15T01:18:39+00:00",
   "Rightmove:94328718": "2026-10-15T01:18:39+00:00",
   "Rightmove:94372674": "2026-10-16T01:16:15+00:00",
-  "Rightmove:94376703": "2026-10-16T08:17:17+00:00"
+  "Rightmove:94376703": "2026-10-16T08:17:17+00:00",
+  "Rightmove:94388061": "2026-10-16T10:44:37+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -267,7 +268,7 @@
    "bills_included": true,
    "address": "Shaftesbury Avenue, Redland",
    "walk_min": null,
-   "note": "available from 30th jul 2027",
+   "note": "available from 30th july 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-13T15:55:10+00:00"
   },
@@ -280,7 +281,7 @@
    "bills_included": true,
    "address": "Cromwell Road (Upper Flat), St Andrew's",
    "walk_min": null,
-   "note": "available from 8th july 2027",
+   "note": "available from 8th jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-13T23:41:33+00:00"
   },
@@ -400,6 +401,19 @@
    "note": "available 05 Jun 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-16T08:17:17+00:00"
+  },
+  "Rightmove:94388061": {
+   "source": "Rightmove",
+   "id": "94388061",
+   "url": "https://www.rightmove.co.uk/properties/94388061",
+   "beds": 6,
+   "pppw": 183.46153846153848,
+   "bills_included": false,
+   "address": "Queens Road (Flat 4), Clifton, Bristol, BS8",
+   "walk_min": 6,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-16T10:44:37+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
