@@ -116,7 +116,8 @@
   "Rightmove:94421736": "2026-10-17T01:17:13+00:00",
   "Rightmove:94457919": "2026-10-19T11:50:17+00:00",
   "Rightmove:94462704": "2026-10-19T13:11:23+00:00",
-  "UniHomes:2127661666": "2026-10-19T13:11:23+00:00"
+  "UniHomes:2127661666": "2026-10-19T13:11:23+00:00",
+  "UniHomes:764454796": "2026-10-19T13:58:22+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -290,7 +291,7 @@
    "bills_included": true,
    "address": "Cromwell Road (Upper Flat), St Andrew's",
    "walk_min": null,
-   "note": "available from 8th july 2027",
+   "note": "available from 8th jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-13T23:41:33+00:00"
   },
@@ -540,6 +541,19 @@
    "note": "available from 1st june 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-19T13:11:23+00:00"
+  },
+  "UniHomes:764454796": {
+   "source": "UniHomes",
+   "id": "764454796",
+   "url": "https://www.unihomes.co.uk/property/764454796/bristol/redland/6-bedroom-student-house/redland-terrace",
+   "beds": 6,
+   "pppw": 208.0,
+   "bills_included": true,
+   "address": "Redland Terrace, Redland",
+   "walk_min": null,
+   "note": "available from 15th june 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-19T13:58:22+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
