@@ -116,7 +116,7 @@
   "Rightmove:94421736": "2026-10-17T01:17:13+00:00"
  },
  "failures": {
-  "Rightmove": 1,
+  "Rightmove": 0,
   "OpenRent": 1,
   "AccommodationForStudents": 0,
   "UniHomes": 0
@@ -274,7 +274,7 @@
    "bills_included": true,
    "address": "Shaftesbury Avenue, Redland",
    "walk_min": null,
-   "note": "available from 30th jul 2027",
+   "note": "available from 30th july 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-13T15:55:10+00:00"
   },
@@ -287,7 +287,7 @@
    "bills_included": true,
    "address": "Cromwell Road (Upper Flat), St Andrew's",
    "walk_min": null,
-   "note": "available from 8th july 2027",
+   "note": "available from 8th jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-13T23:41:33+00:00"
   },
