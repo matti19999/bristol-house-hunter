@@ -114,7 +114,9 @@
   "Rightmove:94421727": "2026-10-17T01:17:13+00:00",
   "Rightmove:94421733": "2026-10-17T01:17:13+00:00",
   "Rightmove:94421736": "2026-10-17T01:17:13+00:00",
-  "Rightmove:94457919": "2026-10-19T11:50:17+00:00"
+  "Rightmove:94457919": "2026-10-19T11:50:17+00:00",
+  "Rightmove:94462704": "2026-10-19T13:11:23+00:00",
+  "UniHomes:2127661666": "2026-10-19T13:11:23+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -512,6 +514,32 @@
    "note": "available 01 Jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-19T11:50:17+00:00"
+  },
+  "Rightmove:94462704": {
+   "source": "Rightmove",
+   "id": "94462704",
+   "url": "https://www.rightmove.co.uk/properties/94462704",
+   "beds": 6,
+   "pppw": 196.15384615384616,
+   "bills_included": false,
+   "address": "Flat C, Cotham Hill Apartments, 3 Hampton Lane (2FF), Cotham, Bristol, BS6",
+   "walk_min": 10,
+   "note": "available 02 Jul 2028",
+   "bathrooms": 2,
+   "first_seen": "2026-10-19T13:11:23+00:00"
+  },
+  "UniHomes:2127661666": {
+   "source": "UniHomes",
+   "id": "2127661666",
+   "url": "https://www.unihomes.co.uk/property/2127661666/bristol/clifton/6-bedroom-student-house/dowry-place",
+   "beds": 6,
+   "pppw": 196.0,
+   "bills_included": true,
+   "address": "Dowry Place, Clifton",
+   "walk_min": null,
+   "note": "available from 1st june 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-19T13:11:23+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
