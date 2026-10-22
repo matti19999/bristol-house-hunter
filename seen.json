@@ -127,7 +127,8 @@
   "Rightmove:94538130": "2026-10-21T01:31:02+00:00",
   "Rightmove:94562001": "2026-10-21T12:54:07+00:00",
   "UniHomes:2053583831": "2026-10-21T12:54:07+00:00",
-  "Rightmove:94585737": "2026-10-22T01:19:35+00:00"
+  "Rightmove:94585737": "2026-10-22T01:19:35+00:00",
+  "Rightmove:94601724": "2026-10-22T10:58:42+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -548,7 +549,7 @@
    "bills_included": true,
    "address": "Dowry Place, Clifton",
    "walk_min": null,
-   "note": "available from 1st june 2027",
+   "note": "available from 1st jun 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-19T13:11:23+00:00"
   },
@@ -561,7 +562,7 @@
    "bills_included": true,
    "address": "Redland Terrace, Redland",
    "walk_min": null,
-   "note": "available from 15th june 2027",
+   "note": "available from 15th jun 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-19T13:58:22+00:00"
   },
@@ -678,7 +679,7 @@
    "bills_included": true,
    "address": "West Park, Clifton",
    "walk_min": null,
-   "note": "available from 29th june 2027",
+   "note": "available from 29th jun 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-21T12:54:07+00:00"
   },
@@ -694,6 +695,19 @@
    "note": "available 03 Jun 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-22T01:19:35+00:00"
+  },
+  "Rightmove:94601724": {
+   "source": "Rightmove",
+   "id": "94601724",
+   "url": "https://www.rightmove.co.uk/properties/94601724",
+   "beds": 5,
+   "pppw": 161.53846153846155,
+   "bills_included": false,
+   "address": "Camden Road, Southville, Bristol, Bristol, BS3",
+   "walk_min": 24,
+   "note": "available 02 Jul 2027",
+   "bathrooms": 3,
+   "first_seen": "2026-10-22T10:58:42+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
