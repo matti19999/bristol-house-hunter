@@ -130,7 +130,8 @@
   "Rightmove:94585737": "2026-10-22T01:19:35+00:00",
   "Rightmove:94601724": "2026-10-22T10:58:42+00:00",
   "Rightmove:94606905": "2026-10-22T11:34:22+00:00",
-  "Rightmove:95313560": "2026-10-23T14:15:47+00:00"
+  "Rightmove:95313560": "2026-10-23T14:15:47+00:00",
+  "UniHomes:182737741": "2026-10-23T15:00:54+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -736,6 +737,19 @@
    "note": "available 09 Aug 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-23T14:15:47+00:00"
+  },
+  "UniHomes:182737741": {
+   "source": "UniHomes",
+   "id": "182737741",
+   "url": "https://www.unihomes.co.uk/property/182737741/bristol/montpelier/6-bedroom-student-house/richmond-road",
+   "beds": 6,
+   "pppw": 224.37,
+   "bills_included": true,
+   "address": "Richmond Road, Montpelier",
+   "walk_min": null,
+   "note": "available from 9th aug 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-23T15:00:54+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
