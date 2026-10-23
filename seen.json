@@ -129,7 +129,8 @@
   "UniHomes:2053583831": "2026-10-21T12:54:07+00:00",
   "Rightmove:94585737": "2026-10-22T01:19:35+00:00",
   "Rightmove:94601724": "2026-10-22T10:58:42+00:00",
-  "Rightmove:94606905": "2026-10-22T11:34:22+00:00"
+  "Rightmove:94606905": "2026-10-22T11:34:22+00:00",
+  "Rightmove:95313560": "2026-10-23T14:15:47+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -722,6 +723,19 @@
    "note": "available 01 Aug 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-22T11:34:22+00:00"
+  },
+  "Rightmove:95313560": {
+   "source": "Rightmove",
+   "id": "95313560",
+   "url": "https://www.rightmove.co.uk/properties/95313560",
+   "beds": 6,
+   "pppw": 175.3846153846154,
+   "bills_included": false,
+   "address": "Park Street, City Centre, Bristol",
+   "walk_min": 9,
+   "note": "available 09 Aug 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-23T14:15:47+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
