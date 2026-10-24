@@ -138,7 +138,8 @@
   "Rightmove:94679379": "2026-10-23T17:31:46+00:00",
   "Rightmove:94679382": "2026-10-23T17:31:46+00:00",
   "Rightmove:94679385": "2026-10-23T17:31:46+00:00",
-  "Rightmove:94679388": "2026-10-23T17:31:46+00:00"
+  "Rightmove:94679388": "2026-10-23T17:31:46+00:00",
+  "AccommodationForStudents:300336": "2026-10-24T14:29:49+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -848,6 +849,19 @@
    "note": "available 06 Jul 2027",
    "bathrooms": 3,
    "first_seen": "2026-10-23T17:31:46+00:00"
+  },
+  "AccommodationForStudents:300336": {
+   "source": "AccommodationForStudents",
+   "id": "300336",
+   "url": "https://www.accommodationforstudents.com/property/300336-6-bed-house-montpelier-bristol",
+   "beds": 6,
+   "pppw": 200.0,
+   "bills_included": false,
+   "address": "Shaftsbury Avenue, Montpelier",
+   "walk_min": 23,
+   "note": "tenancy from 02 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-24T14:29:49+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
