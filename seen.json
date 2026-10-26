@@ -139,7 +139,9 @@
   "Rightmove:94679382": "2026-10-23T17:31:46+00:00",
   "Rightmove:94679385": "2026-10-23T17:31:46+00:00",
   "Rightmove:94679388": "2026-10-23T17:31:46+00:00",
-  "AccommodationForStudents:300336": "2026-10-24T14:29:49+00:00"
+  "AccommodationForStudents:300336": "2026-10-24T14:29:49+00:00",
+  "Rightmove:94749975": "2026-10-26T17:17:18+00:00",
+  "Rightmove:94737555": "2026-10-26T17:17:18+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -662,7 +664,7 @@
    "beds": 6,
    "pppw": 195.92307692307693,
    "bills_included": false,
-   "address": "Cotham Hill, Cotham, Bristol, BS6",
+   "address": "Maisonette First And Second Floors, Cotham Hill, Cotham, Bristol, Bristol City",
    "walk_min": 13,
    "note": "available 14 Jun 2027",
    "bathrooms": 2,
@@ -862,6 +864,32 @@
    "note": "tenancy from 02 Jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-24T14:29:49+00:00"
+  },
+  "Rightmove:94749975": {
+   "source": "Rightmove",
+   "id": "94749975",
+   "url": "https://www.rightmove.co.uk/properties/94749975",
+   "beds": 5,
+   "pppw": 190.38461538461542,
+   "bills_included": false,
+   "address": "Queens Road, Clifton, Bristol, BS8",
+   "walk_min": 11,
+   "note": "available 08 Jul 2027",
+   "bathrooms": null,
+   "first_seen": "2026-10-26T17:17:18+00:00"
+  },
+  "Rightmove:94737555": {
+   "source": "Rightmove",
+   "id": "94737555",
+   "url": "https://www.rightmove.co.uk/properties/94737555",
+   "beds": 6,
+   "pppw": 176.53846153846155,
+   "bills_included": false,
+   "address": "Whiteladies Road, Clifton, Bristol, BS8",
+   "walk_min": 23,
+   "note": "available 16 Jun 2027",
+   "bathrooms": 3,
+   "first_seen": "2026-10-26T17:17:18+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
