@@ -153,7 +153,8 @@
   "Rightmove:94758375": "2026-10-27T05:51:37+00:00",
   "Rightmove:94758330": "2026-10-27T05:51:37+00:00",
   "Rightmove:94758333": "2026-10-27T05:51:37+00:00",
-  "Rightmove:94758348": "2026-10-27T05:51:37+00:00"
+  "Rightmove:94758348": "2026-10-27T05:51:37+00:00",
+  "Rightmove:94809189": "2026-10-27T20:59:57+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1058,6 +1059,19 @@
    "note": "available 01 Jul 2027",
    "bathrooms": 5,
    "first_seen": "2026-10-27T05:51:37+00:00"
+  },
+  "Rightmove:94809189": {
+   "source": "Rightmove",
+   "id": "94809189",
+   "url": "https://www.rightmove.co.uk/properties/94809189",
+   "beds": 5,
+   "pppw": 160.38461538461542,
+   "bills_included": false,
+   "address": "Dove Street, Kingsdown, Bristol, BS2",
+   "walk_min": 11,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-27T20:59:57+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
