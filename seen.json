@@ -170,7 +170,10 @@
   "UniHomes:1461967302": "2026-10-28T18:48:41+00:00",
   "UniHomes:1436402551": "2026-10-28T18:48:41+00:00",
   "UniHomes:174724196": "2026-10-28T18:48:41+00:00",
-  "Rightmove:94872981": "2026-10-29T02:06:31+00:00"
+  "Rightmove:94872981": "2026-10-29T02:06:31+00:00",
+  "UniHomes:1991660610": "2026-10-29T15:30:36+00:00",
+  "UniHomes:116444081": "2026-10-29T15:30:36+00:00",
+  "UniHomes:300905505": "2026-10-29T15:30:36+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1296,6 +1299,45 @@
    "note": "available 01 Jul 2027",
    "bathrooms": 2,
    "first_seen": "2026-10-29T02:06:31+00:00"
+  },
+  "UniHomes:1991660610": {
+   "source": "UniHomes",
+   "id": "1991660610",
+   "url": "https://www.unihomes.co.uk/property/1991660610/bristol/redland/6-bedroom-student-house/north-road",
+   "beds": 6,
+   "pppw": 199.92,
+   "bills_included": true,
+   "address": "North Road, Redland",
+   "walk_min": null,
+   "note": "available from 11th jun 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-29T15:30:36+00:00"
+  },
+  "UniHomes:116444081": {
+   "source": "UniHomes",
+   "id": "116444081",
+   "url": "https://www.unihomes.co.uk/property/116444081/bristol/stokes-croft/6-bedroom-student-house/classic-house",
+   "beds": 6,
+   "pppw": 205.0,
+   "bills_included": true,
+   "address": "Classic House, Stokes Croft",
+   "walk_min": null,
+   "note": "available from 7th jul 2027",
+   "bathrooms": 6,
+   "first_seen": "2026-10-29T15:30:36+00:00"
+  },
+  "UniHomes:300905505": {
+   "source": "UniHomes",
+   "id": "300905505",
+   "url": "https://www.unihomes.co.uk/property/300905505/bristol/stokes-croft/5-bedroom-student-house/classic-house",
+   "beds": 5,
+   "pppw": 207.0,
+   "bills_included": true,
+   "address": "Classic House, Stokes Croft",
+   "walk_min": null,
+   "note": "available from 7th jul 2027",
+   "bathrooms": 5,
+   "first_seen": "2026-10-29T15:30:36+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5, 6], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
