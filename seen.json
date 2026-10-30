@@ -1444,7 +1444,7 @@
    "url": "https://www.rightmove.co.uk/properties/94913916",
    "beds": 6,
    "pppw": 182.3076923076923,
-   "bills_included": true,
+   "bills_included": false,
    "address": "Charles Street, Bristol, BS1",
    "walk_min": 16,
    "note": "available 07 Jul 2027",
