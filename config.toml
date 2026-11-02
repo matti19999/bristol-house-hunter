@@ -8,7 +8,7 @@ max_pppw = 210
 max_pppw_bills_included = 225
 
 [property]
-bedrooms = [5, 6]
+bedrooms = [5]
 # Listings that don't say how many bathrooms are still emailed, marked "bathrooms not stated".
 min_bathrooms = 2
 
