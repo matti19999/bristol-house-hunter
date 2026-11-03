@@ -1306,6 +1306,58 @@
    "note": "available from 30th jun 2027",
    "bathrooms": 2,
    "first_seen": "2026-11-03T16:15:33+00:00"
+  },
+  "UniHomes:1436750995": {
+   "source": "UniHomes",
+   "id": "1436750995",
+   "url": "https://www.unihomes.co.uk/property/1436750995/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
+   "beds": 5,
+   "pppw": 210.0,
+   "bills_included": true,
+   "address": "47 St Nicholas Street, City Centre",
+   "walk_min": null,
+   "note": "available from 9th jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-28T13:01:41+00:00"
+  },
+  "UniHomes:1849311647": {
+   "source": "UniHomes",
+   "id": "1849311647",
+   "url": "https://www.unihomes.co.uk/property/1849311647/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
+   "beds": 5,
+   "pppw": 210.0,
+   "bills_included": true,
+   "address": "47 St Nicholas Street, City Centre",
+   "walk_min": null,
+   "note": "available from 9th jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-28T18:48:41+00:00"
+  },
+  "UniHomes:803610962": {
+   "source": "UniHomes",
+   "id": "803610962",
+   "url": "https://www.unihomes.co.uk/property/803610962/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
+   "beds": 5,
+   "pppw": 207.0,
+   "bills_included": true,
+   "address": "Stokes Croft, Stokes Croft",
+   "walk_min": null,
+   "note": "available from 6th jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-28T13:01:41+00:00"
+  },
+  "UniHomes:1099912940": {
+   "source": "UniHomes",
+   "id": "1099912940",
+   "url": "https://www.unihomes.co.uk/property/1099912940/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
+   "beds": 5,
+   "pppw": 207.0,
+   "bills_included": true,
+   "address": "Stokes Croft, Stokes Croft",
+   "walk_min": null,
+   "note": "available from 6th jul 2027",
+   "bathrooms": 2,
+   "first_seen": "2026-10-28T13:01:41+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]"
