@@ -17,6 +17,26 @@ computers, so your laptop can be off.
 - **Pause it:** GitHub repo → Actions → House hunter → "..." → Disable workflow.
 - **Run a check now:** GitHub repo → Actions → House hunter → Run workflow.
 
+## Requesting viewings
+
+Double-click **Open Viewing Page.bat** on your laptop. The page opens in your
+browser and runs only while its small window is open, so close the window when
+you're done.
+
+1. **Tick** the properties you want. Ticks do nothing by themselves.
+2. Press **Submit**. You'll see exactly who gets emailed and what it says.
+3. Press **Send**, or **Go back** to change your mind.
+
+- **Remove** hides a property. It stays under "Removed" so you can put it back.
+- **Add a property you found yourself** takes a link from any site. Agents in your
+  address book are filled in. Otherwise type the email address yourself.
+- It starts in **test mode**, where everything goes to your own inbox. Going live is a
+  button under "Your details", and there's a limit of 5 real requests a day.
+- Requests come from your Gmail, with replies going to your inbox.
+- Agent addresses are in `agents.toml`. Your details and history stay on this laptop in
+  `viewing_details.json` and `viewing_state.json`, and are never uploaded to GitHub.
+- If emails fail, double-click **Set Up Email.bat** and enter a new Gmail app password.
+
 ## Good to know
 
 - You're only emailed about each place once. If nothing new appears, there's no email.

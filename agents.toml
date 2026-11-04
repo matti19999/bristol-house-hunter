@@ -1,0 +1,39 @@
+# Letting agents the viewing page can email. Each address was checked on the
+# agent's own website on 4 Nov 2026 (source). Only add addresses you've seen
+# published by the agent. Never guess. Agents not listed here show their phone
+# number instead, and you can type an address on the page for a single listing.
+
+[[agent]]
+name = "Digs"
+email = "info@bristoldigs.co.uk"
+source = "https://bristollettings.co.uk/contact/"
+
+[[agent]]
+name = "Abode Property Management"
+email = "info@yourabode.co.uk"
+source = "https://yourabode.co.uk/contact/"
+
+[[agent]]
+name = "Flats4Students"
+email = "info@flats4students.co.uk"
+source = "https://flats4students.co.uk/contact-us/"
+
+[[agent]]
+name = "Anthony James & Co"
+email = "info@antjam.com"
+source = "https://www.antjam.com/contact-us/"
+
+[[agent]]
+name = "Bristol Property Centre"
+email = "info@bristolpropertycentre.co.uk"
+source = "https://www.bristolpropertycentre.co.uk/"
+
+[[agent]]
+name = "Xeno Property"
+email = "info@xenoproperty.com"
+source = "https://www.xenoproperty.com/contact"
+
+[[agent]]
+name = "Campbell Property"
+email = "lettings@campbellproperty.co.uk"
+source = "https://www.campbellproperty.co.uk/contact.php"

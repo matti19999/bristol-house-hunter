@@ -24,6 +24,7 @@ import tomllib
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from email.message import EmailMessage
+from email.utils import formataddr
 from pathlib import Path
 
 import requests
@@ -42,6 +43,8 @@ HEADERS = {
 WEEKS_PER_MONTH = 52 / 12
 # Text yourself once if a site has failed this many checks in a row.
 FAILURE_ALERT_AFTER = 12
+# Bump when Listing gains fields, so the next check re-reads everything once.
+STATE_SCHEMA = 2
 
 
 @dataclass
@@ -56,6 +59,9 @@ class Listing:
     walk_min: int | None = None
     note: str = ""
     bathrooms: int | None = None  # None = the listing doesn't say
+    image: str = ""
+    agent: str = ""
+    agent_phone: str = ""
 
     @property
     def key(self):
@@ -201,19 +207,26 @@ def rightmove(cfg, first_run, seen):
                 continue
             weekly = to_weekly(p["price"]["amount"], p["price"].get("frequency"))
             loc = p.get("location") or {}
+            customer = p.get("customer") or {}
+            photos = (p.get("propertyImages") or {}).get("images") or [{}]
             l = Listing(
                 source="Rightmove", id=str(p["id"]),
                 url="https://www.rightmove.co.uk/properties/" + str(p["id"]),
                 beds=n, pppw=weekly / n, bills_included=False,
                 bathrooms=p.get("bathrooms") or None,
+                image=photos[0].get("srcUrl", ""),
+                agent=customer.get("brandTradingName") or "",
+                agent_phone=customer.get("contactTelephone") or "",
                 address=p.get("displayAddress", ""),
                 walk_min=walk_minutes(cfg, loc.get("latitude"), loc.get("longitude")),
                 note=(f"available {datetime.fromisoformat(avail.replace('Z', '+00:00')):%d %b %Y}"
                       if avail else ""),
             )
             # Only open the full page for would-be matches and suspiciously cheap
-            # ones (ones already seen were checked when they were new).
-            if l.key not in seen and (l.pppw < MIN_PLAUSIBLE_PPPW or matches(cfg, l)):
+            # ones. Ones already seen were checked when they were new, so they're
+            # only re-read on a full search.
+            if ((first_run or l.key not in seen)
+                    and (l.pppw < MIN_PLAUSIBLE_PPPW or matches(cfg, l))):
                 check_rightmove_page(l, float(p["price"]["amount"]))
             out.append(l)
         # Results are newest-first, so once a whole page is old news, stop.
@@ -299,6 +312,8 @@ def accommodation_for_students(cfg, first_run, seen):
                         url="https://www.accommodationforstudents.com" + p["url"],
                         beds=n, pppw=float(terms["rentPpw"]["value"]),
                         bathrooms=p.get("numberOfBathrooms") or None,
+                        image=(p.get("images") or [{}])[0].get("url", ""),
+                        agent=(p.get("accommodationProvider") or {}).get("name", ""),
                         bills_included=terms.get("billsIncluded") == "all",
                         address=", ".join(x for x in (a.get("address2") or a.get("address1"),
                                                       a.get("area")) if x),
@@ -336,6 +351,7 @@ def unihomes(cfg, first_run, seen):
             if not pr or not for_target_year(cfg, text=text):
                 continue
             baths = re.search(r"(\d+)\s*bathroom", text, re.I)
+            photo = re.search(r"https://[^\"' ]+\.(?:jpe?g|png|webp)", str(card))
             addr = re.search(r"\d+ Bedroom \w+ (.+?)(?: Bills included| £|$)", text, re.I)
             avail = re.search(r"available (immediately|from \d+\w* \w+(?: \d{4})?)", text, re.I)
             out.append(Listing(
@@ -343,6 +359,8 @@ def unihomes(cfg, first_run, seen):
                 else "https://www.unihomes.co.uk" + a["href"],
                 beds=n, pppw=float(pr.group(1).replace(",", "")),
                 bathrooms=int(baths.group(1)) if baths else None,
+                image=photo.group(0) if photo else "",
+                agent="UniHomes",
                 bills_included="bills included" in text.lower(),
                 address=addr.group(1) if addr else area.title(),
                 note=f"available {avail.group(1).lower()}" if avail else "",
@@ -403,17 +421,25 @@ def listings_email(listings, intro):
     return text, body
 
 
-def send_email(subject, text, body_html=None, dry_run=False):
-    """Returns True if the email went out (or would have, in a dry run)."""
+def send_email(subject, text, body_html=None, dry_run=False, to=None,
+               from_name="House Hunter", reply_to=None, cc=None):
+    """Returns True if the email went out (or would have, in a dry run).
+    Sends to EMAIL_TO unless `to` is given."""
     if dry_run:
         print(f"\n--- would email: {subject} ---\n{text}\n------------------")
         return True
-    user, password, to = (os.environ.get(k) for k in ("SMTP_USER", "SMTP_PASSWORD", "EMAIL_TO"))
+    user, password = os.environ.get("SMTP_USER"), os.environ.get("SMTP_PASSWORD")
+    to = to or os.environ.get("EMAIL_TO")
     if not (user and password and to):
         log("WARNING: email not sent. Fill in SMTP_USER, SMTP_PASSWORD and EMAIL_TO in .env")
         return False
     msg = EmailMessage()
-    msg["Subject"], msg["From"], msg["To"] = subject, f"House Hunter <{user}>", to
+    msg["Subject"], msg["To"] = subject, to
+    msg["From"] = formataddr((from_name, user))
+    if reply_to:
+        msg["Reply-To"] = reply_to
+    if cc:
+        msg["Cc"] = cc
     msg.set_content(text)
     if body_html:
         msg.add_alternative(body_html, subtype="html")
@@ -469,7 +495,8 @@ def check(cfg, dry_run=False):
                          cfg["location"]["max_walk_minutes"]], sort_keys=True)
     criteria_changed = not first_run and state.get("search") != search
     state["search"] = search
-    full_sweep = first_run or criteria_changed
+    full_sweep = first_run or criteria_changed or state.get("schema") != STATE_SCHEMA
+    state["schema"] = STATE_SCHEMA
 
     found = []
     for name, fn in SOURCES.items():
@@ -499,7 +526,13 @@ def check(cfg, dry_run=False):
         state["matches"] = {}
     all_matches = state.setdefault("matches", {})
     for l in good:
-        all_matches[l.key] = asdict(l) | {"first_seen": seen[l.key]}
+        entry = asdict(l) | {"first_seen": seen[l.key]}
+        # Only a full search re-reads listing pages, so otherwise keep the checked
+        # price and bills from when the listing was first read.
+        old = all_matches.get(l.key)
+        if old and not full_sweep:
+            entry["pppw"], entry["bills_included"] = old["pppw"], old["bills_included"]
+        all_matches[l.key] = entry
     log(f"{len(good)} matching, {len(new)} new")
 
     if all_matches:

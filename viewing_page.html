@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House Hunter Viewings</title>
+<style nonce="{{NONCE}}">
+:root {
+  color-scheme: light dark;
+  --bg: #f5f6f4; --panel: #fff; --ink: #1c211f; --muted: #626b67; --line: #dcdfdb;
+  --accent: #0b6e5f; --accent-ink: #fff; --soft: #e4f1ee; --warn: #fff3d6; --warn-ink: #6b4c00;
+  --live: #a4262c; --done: #1f6f3f; --shadow: 0 1px 3px rgb(0 0 0 / .12);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161a19; --panel: #212725; --ink: #eef1ef; --muted: #a2aba7; --line: #39413e;
+    --accent: #4cbfa9; --accent-ink: #06231e; --soft: #1f3631; --warn: #3b2f12; --warn-ink: #f1d695;
+    --live: #f08085; --done: #6fd196; --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.45 system-ui, "Segoe UI", sans-serif; padding-bottom: 90px; }
+main { max-width: 1240px; margin: 0 auto; padding: 20px 16px; }
+h1 { font-size: 26px; margin: 0; }
+h2 { font-size: 18px; margin: 0; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 14px; }
+header p { margin: 0; color: var(--muted); font-size: 14px; flex-basis: 100%; }
+.pill { padding: 3px 10px; border-radius: 99px; font-size: 13px; font-weight: 600; background: var(--warn); color: var(--warn-ink); }
+.pill.live { background: var(--live); color: #fff; }
+.notice { background: var(--warn); color: var(--warn-ink); padding: 10px 14px; border-radius: 8px; margin-bottom: 14px; font-size: 15px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 14px; }
+details.panel > summary, .panel-head { padding: 13px 16px; font-weight: 600; cursor: pointer; }
+.panel-body { padding: 0 16px 16px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.grow { flex: 1 1 260px; min-width: 0; }
+label.field { display: block; margin-bottom: 10px; font-size: 14px; font-weight: 600; }
+label.field input { display: block; width: 100%; margin-top: 4px; font-weight: 400; }
+.fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 14px; }
+input[type=text], input[type=email], input[type=url], select {
+  font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 7px; padding: 8px 10px; min-height: 40px;
+}
+input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button { font: inherit; font-weight: 600; min-height: 40px; padding: 7px 14px; border-radius: 7px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+button.link { border: 0; background: none; padding: 4px 0; min-height: 0; color: var(--muted); font-weight: 500; text-decoration: underline; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.muted { color: var(--muted); font-size: 14px; }
+.err { color: var(--live); font-size: 14px; font-weight: 600; }
+.ok { color: var(--done); font-size: 14px; font-weight: 600; }
+.lookup { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.lookup img { width: 220px; max-width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 8px; background: var(--soft); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 18px 0 10px; }
+.toolbar h2 { margin-right: auto; }
+.toolbar label { display: flex; gap: 6px; align-items: center; font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); gap: 14px; }
+.card { position: relative; background: var(--panel); border: 2px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+.card.ticked { border-color: var(--accent); }
+.photo { position: relative; aspect-ratio: 3/2; background: var(--soft); }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo .none { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 14px; }
+.tick { position: absolute; top: 8px; left: 8px; display: flex; align-items: center; gap: 7px; padding: 6px 10px; background: var(--panel); color: var(--ink); border-radius: 7px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 4px rgb(0 0 0 / .3); }
+.tick input { width: 20px; height: 20px; margin: 0; accent-color: var(--accent); }
+.badge { position: absolute; top: 8px; right: 8px; padding: 4px 9px; border-radius: 7px; font-size: 13px; font-weight: 600; background: var(--done); color: #fff; }
+.badge.test { background: var(--warn); color: var(--warn-ink); }
+.info { padding: 11px 13px 13px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.price { font-size: 19px; font-weight: 700; }
+.addr { font-weight: 600; overflow-wrap: anywhere; }
+.facts { color: var(--muted); font-size: 14px; }
+.contact { font-size: 14px; overflow-wrap: anywhere; margin-top: 4px; }
+.contact.none { color: var(--warn-ink); background: var(--warn); padding: 7px 9px; border-radius: 7px; }
+.contact.none .row { margin-top: 6px; }
+.contact.none input { flex: 1 1 130px; min-width: 0; background: var(--panel); min-height: 36px; padding: 5px 8px; font-size: 14px; }
+.contact.none button { min-height: 36px; padding: 4px 10px; font-size: 14px; }
+.card-actions { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 8px; font-size: 14px; }
+.card-actions a { color: var(--accent); font-weight: 600; }
+.removed-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
+.removed-row span { flex: 1 1 200px; overflow-wrap: anywhere; }
+.bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--panel); border-top: 1px solid var(--line); padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: flex-end; box-shadow: 0 -2px 8px rgb(0 0 0 / .1); }
+.bar .count { margin-right: auto; font-weight: 600; }
+dialog { width: min(680px, calc(100vw - 24px)); max-height: 88vh; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink); padding: 18px; }
+dialog::backdrop { background: rgb(0 0 0 / .55); }
+.item { display: flex; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+.item img { width: 76px; height: 54px; object-fit: cover; border-radius: 6px; flex: none; background: var(--soft); }
+.item > div { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+.item pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 14px/1.45 system-ui, "Segoe UI", sans-serif; background: var(--bg); padding: 10px; border-radius: 7px; margin: 6px 0 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; margin-top: 14px; }
+.empty { padding: 30px; text-align: center; color: var(--muted); }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Viewing requests</h1>
+    <span class="pill" id="mode"></span>
+    <p id="updated"></p>
+  </header>
+  <div class="notice" id="test-notice" hidden>Test mode: requests only go to your own inbox, so nothing reaches an agent.</div>
+  <div class="notice" id="details-notice" hidden>Add your details below before sending any requests.</div>
+
+  <section class="panel">
+    <div class="panel-head">Add a property you found yourself</div>
+    <div class="panel-body">
+      <div class="row">
+        <input class="grow" type="url" id="paste-url" placeholder="Paste a link to the listing" aria-label="Link to the listing">
+        <button id="paste-go">Look up</button>
+      </div>
+      <p class="err" id="paste-err" hidden></p>
+      <div class="lookup" id="paste-result" hidden>
+        <img id="paste-img" alt="" hidden>
+        <div class="grow">
+          <label class="field">Address or name<input type="text" id="paste-address"></label>
+          <label class="field">Agent or landlord's email<input type="email" id="paste-email" placeholder="name@example.com"></label>
+          <p class="muted" id="paste-hint"></p>
+          <div class="row">
+            <button class="primary" id="paste-add">Add to my list and tick it</button>
+            <button id="paste-cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <details class="panel" id="details-panel">
+    <summary>Your details and email connection</summary>
+    <div class="panel-body">
+      <div class="fields">
+        <label class="field">Your name<input type="text" id="d-name" autocomplete="name"></label>
+        <label class="field">Your phone number<input type="text" id="d-phone" autocomplete="tel"></label>
+        <label class="field">When you're free for viewings<input type="text" id="d-availability" placeholder="on weekdays after 3pm and on Saturdays"></label>
+        <label class="field">About your group<input type="text" id="d-group"></label>
+        <label class="field">Year you're looking for<input type="text" id="d-year"></label>
+      </div>
+      <div class="row">
+        <button class="primary" id="d-save">Save details</button>
+        <span class="ok" id="d-saved" hidden>Saved</span>
+      </div>
+      <hr>
+      <p id="conn-status" class="muted"></p>
+      <div class="row">
+        <button id="conn-test">Send me a test email</button>
+        <span id="conn-result" class="muted"></span>
+      </div>
+      <hr>
+      <div class="row">
+        <button id="live-toggle"></button>
+        <span class="muted" id="live-text"></span>
+      </div>
+      <p class="err" id="live-err" hidden></p>
+    </div>
+  </details>
+
+  <div class="toolbar">
+    <h2 id="list-title">Properties</h2>
+    <label><input type="checkbox" id="only-email"> Only agents I can email</label>
+    <label>Sort
+      <select id="sort">
+        <option value="price">Cheapest first</option>
+        <option value="walk">Closest first</option>
+        <option value="new">Newest first</option>
+      </select>
+    </label>
+    <button id="refresh">Refresh</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>Nothing to show.</div>
+
+  <details class="panel" id="removed-panel" hidden>
+    <summary id="removed-title"></summary>
+    <div class="panel-body" id="removed-list"></div>
+  </details>
+</main>
+
+<div class="bar">
+  <span class="count" id="count">Nothing ticked</span>
+  <button id="clear" disabled>Clear ticks</button>
+  <button class="primary" id="submit" disabled>Submit</button>
+</div>
+
+<dialog id="dialog" aria-labelledby="dlg-title">
+  <h2 id="dlg-title"></h2>
+  <p id="dlg-intro"></p>
+  <p class="err" id="dlg-err" hidden></p>
+  <div id="dlg-items"></div>
+  <div class="actions">
+    <button id="dlg-back">Go back</button>
+    <button class="primary" id="dlg-send"></button>
+  </div>
+</dialog>
+
+<script nonce="{{NONCE}}">
+const TOKEN = "{{TOKEN}}";
+const $ = id => document.getElementById(id);
+let data = { listings: [], details: {} };
+const ticked = new Set();
+let pasted = null, pendingKeys = [];
+
+async function post(path, body) {
+  const r = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json", "X-Token": TOKEN }, body: JSON.stringify(body || {}) });
+  return r.json();
+}
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
+function photo(src, alt) {
+  const box = el("div", "photo");
+  if (/^https:\/\//i.test(src || "")) {
+    const img = el("img");
+    img.src = src; img.alt = alt; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+    img.addEventListener("error", () => { img.remove(); box.append(el("div", "none", "Photo unavailable")); });
+    box.append(img);
+  } else box.append(el("div", "none", "No photo"));
+  return box;
+}
+function priceText(l) {
+  if (l.pppw) return `£${Math.round(l.pppw)} pppw${l.bills_included ? " incl. bills" : ""}`;
+  return l.price_text || "Price on listing";
+}
+function factsText(l) {
+  const f = [];
+  if (l.beds) f.push(`${l.beds} bed`);
+  if (l.bathrooms) f.push(`${l.bathrooms} bath`); else if (l.pppw) f.push("bathrooms not stated");
+  if (l.walk_min != null) f.push(`~${l.walk_min} min walk`);
+  return f.join(" · ");
+}
+function shortDate(s) { return s ? new Date(s).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : ""; }
+
+function card(l) {
+  const live = data.details.live;
+  const blocked = !l.to || (live && l.requested);
+  const c = el("article", "card" + (ticked.has(l.key) ? " ticked" : ""));
+  const ph = photo(l.image, l.address || "Property");
+  const lab = el("label", "tick");
+  const box = el("input"); box.type = "checkbox"; box.checked = ticked.has(l.key); box.disabled = blocked;
+  box.setAttribute("aria-label", `Request a viewing of ${l.address}`);
+  box.addEventListener("change", () => {
+    if (box.checked) ticked.add(l.key); else ticked.delete(l.key);
+    c.classList.toggle("ticked", box.checked);
+    updateBar();
+  });
+  lab.append(box, document.createTextNode("Request viewing"));
+  ph.append(lab);
+  if (l.requested) ph.append(el("span", "badge", `Requested ${shortDate(l.requested.at)}`));
+  else if (l.tested) ph.append(el("span", "badge test", `Test sent ${shortDate(l.tested.at)}`));
+  c.append(ph);
+  const i = el("div", "info");
+  i.append(el("div", "price", priceText(l)), el("div", "addr", l.address || "Address on listing"));
+  const facts = factsText(l);
+  if (facts) i.append(el("div", "facts", facts));
+  i.append(el("div", "facts", [l.source, l.note].filter(Boolean).join(" · ")));
+  if (l.to) {
+    i.append(el("div", "contact", `${l.agent ? l.agent + ": " : "Email: "}${l.to}`));
+  } else {
+    const n = el("div", "contact none");
+    n.append(el("div", "", `${l.agent || "Agent"}: no email on file${l.agent_phone ? `. Call ${l.agent_phone}` : ""}`));
+    const row = el("div", "row");
+    const inp = el("input"); inp.type = "email"; inp.placeholder = "Add their email"; inp.setAttribute("aria-label", `Email address for ${l.address}`);
+    const save = el("button", "", "Save");
+    const err = el("div", "err");
+    save.addEventListener("click", async () => {
+      const r = await post("/api/recipient", { key: l.key, email: inp.value });
+      if (r.error) { err.textContent = r.error; return; }
+      await load();
+    });
+    row.append(inp, save); n.append(row, err); i.append(n);
+  }
+  const actions = el("div", "card-actions");
+  const url = safeUrl(l.url);
+  if (url) { const a = el("a", "", "View listing"); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; actions.append(a); }
+  const rm = el("button", "link", "Remove");
+  rm.setAttribute("aria-label", `Remove ${l.address} from the list`);
+  rm.addEventListener("click", async () => { ticked.delete(l.key); await post("/api/remove", { key: l.key }); await load(); });
+  actions.append(rm);
+  i.append(actions);
+  c.append(i);
+  return c;
+}
+
+function render() {
+  const d = data.details, live = d.live;
+  const mode = $("mode");
+  mode.textContent = live ? "Live: emails go to agents" : "Test mode";
+  mode.className = "pill" + (live ? " live" : "");
+  $("test-notice").hidden = live;
+  const needsDetails = !d.name || !d.phone || !d.availability;
+  $("details-notice").hidden = !needsDetails;
+  if (needsDetails) $("details-panel").open = true;
+  $("updated").textContent = data.online ? "Listings are up to date from the hunter on GitHub." : "Couldn't reach GitHub, so this is the last copy saved on this laptop.";
+  const sort = $("sort").value, onlyEmail = $("only-email").checked;
+  const active = data.listings.filter(l => !l.removed);
+  let shown = active.filter(l => !onlyEmail || l.to);
+  const cmp = {
+    price: (a, b) => (a.pppw ?? 1e9) - (b.pppw ?? 1e9),
+    walk: (a, b) => (a.walk_min ?? 1e9) - (b.walk_min ?? 1e9),
+    new: (a, b) => String(b.first_seen).localeCompare(String(a.first_seen)),
+  }[sort];
+  shown = shown.slice().sort(cmp);
+  shown.sort((a, b) => Number(b.custom) - Number(a.custom));
+  $("list-title").textContent = `Properties (${shown.length})`;
+  const grid = $("grid");
+  grid.replaceChildren(...shown.map(card));
+  $("empty").hidden = shown.length > 0;
+  const removed = data.listings.filter(l => l.removed);
+  $("removed-panel").hidden = removed.length === 0;
+  $("removed-title").textContent = `Removed (${removed.length})`;
+  $("removed-list").replaceChildren(...removed.map(l => {
+    const r = el("div", "removed-row");
+    const restore = el("button", "", "Put back");
+    restore.addEventListener("click", async () => { await post("/api/restore", { key: l.key }); await load(); });
+    r.append(el("span", "", `${l.address} · ${priceText(l)}`), restore);
+    if (l.custom) {
+      const del = el("button", "", "Delete");
+      del.addEventListener("click", async () => { await post("/api/delete-custom", { key: l.key }); await load(); });
+      r.append(del);
+    }
+    return r;
+  }));
+  for (const key of [...ticked]) {
+    const l = data.listings.find(x => x.key === key);
+    if (!l || l.removed || !l.to || (live && l.requested)) ticked.delete(key);
+  }
+  $("conn-status").textContent = data.email_ready
+    ? `Requests are sent from your Gmail. Replies come to ${data.email_to || "your inbox"}. Use the button to check the connection.`
+    : "Email isn't set up on this laptop yet. Run Set Up Email.bat in your house hunter folder.";
+  $("live-toggle").textContent = live ? "Switch back to test mode" : "Go live: send to real agents";
+  $("live-text").textContent = live
+    ? `Live. ${data.left_today} of 5 requests left today.`
+    : (data.has_tested ? "Your test has been sent. Check it reads well before going live." : "Send yourself a test request first.");
+  $("live-toggle").disabled = !live && !data.has_tested;
+  updateBar();
+}
+function updateBar() {
+  const n = ticked.size;
+  $("count").textContent = n ? `${n} ticked` : "Nothing ticked";
+  $("clear").disabled = !n;
+  $("submit").disabled = !n;
+  $("submit").textContent = n ? `Submit ${n}` : "Submit";
+}
+function fillDetails() {
+  const d = data.details;
+  for (const f of ["name", "phone", "availability", "group", "year"]) $("d-" + f).value = d[f] || "";
+}
+async function load() {
+  const r = await fetch("/api/data");
+  data = await r.json();
+  render();
+}
+
+$("sort").addEventListener("change", render);
+$("only-email").addEventListener("change", render);
+$("refresh").addEventListener("click", load);
+$("clear").addEventListener("click", () => { ticked.clear(); render(); });
+
+$("d-save").addEventListener("click", async () => {
+  const body = {};
+  for (const f of ["name", "phone", "availability", "group", "year"]) body[f] = $("d-" + f).value.trim();
+  await post("/api/details", body);
+  await load(); fillDetails();
+  $("d-saved").hidden = false;
+  setTimeout(() => { $("d-saved").hidden = true; }, 2500);
+});
+$("conn-test").addEventListener("click", async () => {
+  const out = $("conn-result");
+  out.textContent = "Sending...";
+  const r = await post("/api/test-connection");
+  out.textContent = r.ok ? `Sent. Check ${data.email_to}.` : "That failed. Run Set Up Email.bat with a new Gmail app password.";
+});
+$("live-toggle").addEventListener("click", async () => {
+  const going = !data.details.live;
+  const r = await post("/api/details", { live: going });
+  $("live-err").hidden = !r.error;
+  $("live-err").textContent = r.error || "";
+  await load();
+});
+
+function pasteReset() {
+  pasted = null;
+  $("paste-result").hidden = true;
+  $("paste-err").hidden = true;
+}
+$("paste-cancel").addEventListener("click", () => { pasteReset(); $("paste-url").value = ""; });
+$("paste-go").addEventListener("click", async () => {
+  const url = $("paste-url").value.trim();
+  pasteReset();
+  if (!url) return;
+  $("paste-go").disabled = true; $("paste-go").textContent = "Looking up...";
+  const r = await post("/api/lookup", { url });
+  $("paste-go").disabled = false; $("paste-go").textContent = "Look up";
+  if (r.error) {
+    $("paste-err").textContent = r.error; $("paste-err").hidden = false;
+    pasted = { url: /^https?:\/\//i.test(url) ? url : "https://" + url, source: "Added by you" };
+  } else pasted = r;
+  const img = $("paste-img");
+  img.hidden = !/^https:\/\//i.test(pasted.image || "");
+  if (!img.hidden) { img.src = pasted.image; img.alt = pasted.address || "Property"; }
+  $("paste-address").value = pasted.address || "";
+  $("paste-email").value = pasted.known_email || "";
+  $("paste-hint").textContent = pasted.known_email
+    ? `This address for ${pasted.agent} comes from your checked address book.`
+    : `${pasted.agent ? pasted.agent + " isn't in your address book. " : ""}Type the email address the listing gives you. Without one, you won't be able to send this request.`;
+  $("paste-result").hidden = false;
+});
+$("paste-add").addEventListener("click", async () => {
+  const body = { ...pasted, address: $("paste-address").value.trim(), email: $("paste-email").value.trim() };
+  const r = await post("/api/custom", body);
+  if (r.error) { $("paste-err").textContent = r.error; $("paste-err").hidden = false; return; }
+  if (body.email) ticked.add(r.key);
+  $("paste-url").value = "";
+  pasteReset();
+  await load();
+});
+
+$("submit").addEventListener("click", async () => {
+  pendingKeys = [...ticked];
+  const p = await post("/api/preview", { keys: pendingKeys });
+  const n = p.items.length;
+  $("dlg-title").textContent = p.live ? `Email ${n} agent${n === 1 ? "" : "s"}?` : `Send ${n} test email${n === 1 ? "" : "s"} to yourself?`;
+  $("dlg-intro").textContent = p.live
+    ? `These go straight to the agents and can't be recalled. Press Go back to change anything. ${p.left_today} of 5 requests left today.`
+    : `Test mode: these all go to ${p.email_to || "your inbox"}, not to the agents. Nothing is shared with anyone else.`;
+  const err = $("dlg-err");
+  err.hidden = !p.missing.length;
+  err.textContent = p.missing.length ? `Add ${p.missing.join(", ")} in Your details first.` : "";
+  $("dlg-send").disabled = !!p.missing.length || !n;
+  $("dlg-send").hidden = false;
+  $("dlg-send").textContent = p.live ? `Send ${n} request${n === 1 ? "" : "s"}` : `Send test${n === 1 ? "" : "s"}`;
+  $("dlg-back").textContent = "Go back";
+  $("dlg-items").replaceChildren(...p.items.map(it => {
+    const row = el("div", "item");
+    if (/^https:\/\//i.test(it.image || "")) { const im = el("img"); im.src = it.image; im.alt = ""; im.referrerPolicy = "no-referrer"; row.append(im); }
+    const b = el("div");
+    b.append(el("div", "addr", it.address), el("div", "muted", p.live ? `To: ${it.to}` : `Would go to: ${it.to}`));
+    const det = el("details");
+    det.append(el("summary", "muted", "Read the email"), el("pre", "", `Subject: ${it.subject}\n\n${it.body}`));
+    b.append(det);
+    row.append(b);
+    return row;
+  }));
+  $("dialog").showModal();
+});
+$("dlg-back").addEventListener("click", () => $("dialog").close());
+$("dlg-send").addEventListener("click", async () => {
+  const send = $("dlg-send");
+  send.disabled = true; send.textContent = "Sending...";
+  $("dlg-back").disabled = true;
+  const r = await post("/api/submit", { keys: pendingKeys });
+  $("dlg-back").disabled = false;
+  send.hidden = true;
+  $("dlg-back").textContent = "Done";
+  if (r.error) { $("dlg-err").textContent = r.error; $("dlg-err").hidden = false; return; }
+  const good = r.results.filter(x => x.ok);
+  good.forEach(x => ticked.delete(x.key));
+  $("dlg-title").textContent = `${good.length} of ${r.results.length} sent`;
+  $("dlg-intro").textContent = good.length && !good[0].live ? `Check ${data.email_to} to see how they look.` : "Replies will come to your inbox. Anything that wasn't sent stays ticked.";
+  $("dlg-items").replaceChildren(...r.results.map(x => {
+    const row = el("div", "item");
+    const b = el("div");
+    b.append(el("div", "addr", x.address || "Listing"), x.ok ? el("div", "ok", x.live ? `Sent to ${x.to}` : "Test sent to your inbox") : el("div", "err", x.why));
+    row.append(b);
+    return row;
+  }));
+  await load();
+});
+
+load().then(fillDetails);
+</script>
+</body>
+</html>

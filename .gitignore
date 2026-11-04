@@ -2,3 +2,6 @@
 .env
 __pycache__/
 hunter.log
+# Your personal details and viewing history stay on this laptop.
+viewing_details.json
+viewing_state.json
