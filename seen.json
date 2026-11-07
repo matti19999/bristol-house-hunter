@@ -269,7 +269,8 @@
   "Rightmove:95195163": "2026-11-06T17:44:50+00:00",
   "Rightmove:95192298": "2026-11-06T17:44:50+00:00",
   "Rightmove:154761134": "2026-11-06T17:44:50+00:00",
-  "AccommodationForStudents:329799": "2026-11-06T17:44:50+00:00"
+  "AccommodationForStudents:329799": "2026-11-06T17:44:50+00:00",
+  "Rightmove:95231115": "2026-11-07T02:19:15+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1782,6 +1783,22 @@
    "agent": "Bristol Digs",
    "agent_phone": "",
    "first_seen": "2026-11-06T17:44:50+00:00"
+  },
+  "Rightmove:95231115": {
+   "source": "Rightmove",
+   "id": "95231115",
+   "url": "https://www.rightmove.co.uk/properties/95231115",
+   "beds": 5,
+   "pppw": 178.84615384615387,
+   "bills_included": false,
+   "address": "Alfred Place, Kingsdown, Bristol, BS2",
+   "walk_min": 6,
+   "note": "available 22 Jun 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/22575158e/95231115/22575158ea2bc3a23d38c4a6b6d3e93e_max_476x317.jpeg",
+   "agent": "Digs",
+   "agent_phone": "0117 463 0400",
+   "first_seen": "2026-11-07T02:19:15+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
