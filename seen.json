@@ -271,7 +271,8 @@
   "Rightmove:154761134": "2026-11-06T17:44:50+00:00",
   "AccommodationForStudents:329799": "2026-11-06T17:44:50+00:00",
   "Rightmove:95231115": "2026-11-07T02:19:15+00:00",
-  "Rightmove:95245452": "2026-11-08T02:22:22+00:00"
+  "Rightmove:95245452": "2026-11-08T02:22:22+00:00",
+  "Rightmove:95270022": "2026-11-09T16:01:31+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1816,6 +1817,22 @@
    "agent": "Digs",
    "agent_phone": "0117 463 0400",
    "first_seen": "2026-11-08T02:22:22+00:00"
+  },
+  "Rightmove:95270022": {
+   "source": "Rightmove",
+   "id": "95270022",
+   "url": "https://www.rightmove.co.uk/properties/95270022",
+   "beds": 5,
+   "pppw": 161.53846153846155,
+   "bills_included": false,
+   "address": "Cheltenham Lane - Montpelier",
+   "walk_min": 22,
+   "note": "available 29 Jun 2027",
+   "bathrooms": 3,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/6ef6abdca/95270022/6ef6abdcadcb3a4096055d3a5f8f9edc_max_476x317.jpeg",
+   "agent": "Ocean",
+   "agent_phone": "0117 463 0098",
+   "first_seen": "2026-11-09T16:01:31+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
