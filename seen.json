@@ -281,7 +281,8 @@
   "Rightmove:95312109": "2026-11-10T15:41:55+00:00",
   "Rightmove:37872864": "2026-11-10T15:41:55+00:00",
   "Rightmove:95301153": "2026-11-10T15:41:55+00:00",
-  "UniHomes:1729848282": "2026-11-10T15:41:55+00:00"
+  "UniHomes:1729848282": "2026-11-10T15:41:55+00:00",
+  "Rightmove:95340639": "2026-11-11T01:27:32+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -2018,6 +2019,22 @@
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T18:48:41+00:00"
+  },
+  "Rightmove:95340639": {
+   "source": "Rightmove",
+   "id": "95340639",
+   "url": "https://www.rightmove.co.uk/properties/95340639",
+   "beds": 5,
+   "pppw": 190.38461538461542,
+   "bills_included": false,
+   "address": "5 bedroom Terraced House in Cliftonwood",
+   "walk_min": 22,
+   "note": "available 30 Jun 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/b4a8c4acf/95340639/b4a8c4acf57daebdd9e21c3cfc3676ab_max_476x317.jpeg",
+   "agent": "Flatline Letting and Property Management",
+   "agent_phone": "0117 463 1281",
+   "first_seen": "2026-11-11T01:27:32+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
