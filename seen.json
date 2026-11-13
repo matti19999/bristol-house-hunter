@@ -294,7 +294,10 @@
   "Rightmove:95407512": "2026-11-12T19:14:19+00:00",
   "UniHomes:877134350": "2026-11-12T19:14:19+00:00",
   "UniHomes:905824128": "2026-11-13T07:11:07+00:00",
-  "Rightmove:95448486": "2026-11-13T15:25:23+00:00"
+  "Rightmove:95448486": "2026-11-13T15:25:23+00:00",
+  "Rightmove:95211012": "2026-11-13T21:30:37+00:00",
+  "AccommodationForStudents:330527": "2026-11-13T21:30:37+00:00",
+  "UniHomes:1505840045": "2026-11-13T21:30:37+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1571,7 +1574,7 @@
   "UniHomes:1436750995": {
    "source": "UniHomes",
    "id": "1436750995",
-   "url": "https://unihomes.co.uk/property/1436750995/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
+   "url": "https://www.unihomes.co.uk/property/1436750995/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
    "beds": 5,
    "pppw": 210.0,
    "bills_included": true,
@@ -1579,7 +1582,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/b9c51cca-3fd5-4632-88a1-c6dd01bfdf87.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/b9c51cca-3fd5-4632-88a1-c6dd01bfdf87.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1603,7 +1606,7 @@
   "UniHomes:803610962": {
    "source": "UniHomes",
    "id": "803610962",
-   "url": "https://unihomes.co.uk/property/803610962/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
+   "url": "https://www.unihomes.co.uk/property/803610962/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
    "beds": 5,
    "pppw": 207.0,
    "bills_included": true,
@@ -1611,7 +1614,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1619,7 +1622,7 @@
   "UniHomes:1099912940": {
    "source": "UniHomes",
    "id": "1099912940",
-   "url": "https://unihomes.co.uk/property/1099912940/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
+   "url": "https://www.unihomes.co.uk/property/1099912940/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
    "beds": 5,
    "pppw": 207.0,
    "bills_included": true,
@@ -1627,7 +1630,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1987,7 +1990,7 @@
   "UniHomes:593258489": {
    "source": "UniHomes",
    "id": "593258489",
-   "url": "https://unihomes.co.uk/property/593258489/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
+   "url": "https://www.unihomes.co.uk/property/593258489/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
    "beds": 5,
    "pppw": 210.0,
    "bills_included": true,
@@ -1995,7 +1998,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/2c4c5e3a-a7e2-4ac8-9a92-0e04f104fc7c.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/2c4c5e3a-a7e2-4ac8-9a92-0e04f104fc7c.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -2003,7 +2006,7 @@
   "UniHomes:1729848282": {
    "source": "UniHomes",
    "id": "1729848282",
-   "url": "https://unihomes.co.uk/property/1729848282/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
+   "url": "https://www.unihomes.co.uk/property/1729848282/bristol/city-centre/5-bedroom-student-house/47-st-nicholas-street",
    "beds": 5,
    "pppw": 210.0,
    "bills_included": true,
@@ -2011,7 +2014,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/3ea278ba-ff10-477b-9b0b-339f19b4ea8f.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/3ea278ba-ff10-477b-9b0b-339f19b4ea8f.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-10T15:41:55+00:00"
@@ -2067,7 +2070,7 @@
   "UniHomes:1227673484": {
    "source": "UniHomes",
    "id": "1227673484",
-   "url": "https://unihomes.co.uk/property/1227673484/bristol/st-pauls/5-bedroom-student-house/ashfield-mews",
+   "url": "https://www.unihomes.co.uk/property/1227673484/bristol/st-pauls/5-bedroom-student-house/ashfield-mews",
    "beds": 5,
    "pppw": 207.0,
    "bills_included": true,
@@ -2239,6 +2242,54 @@
    "agent": "Phoenix Property Company",
    "agent_phone": "0117 463 0839",
    "first_seen": "2026-11-13T15:25:23+00:00"
+  },
+  "Rightmove:95211012": {
+   "source": "Rightmove",
+   "id": "95211012",
+   "url": "https://www.rightmove.co.uk/properties/95211012",
+   "beds": 5,
+   "pppw": 199.9846153846154,
+   "bills_included": true,
+   "address": "Cumberland Street, Bristol",
+   "walk_min": 15,
+   "note": "available 04 Sep 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/c45d274e5/95211012/c45d274e575f200a22e0c2d45fa2fffe_max_476x317.jpeg",
+   "agent": "Berkeley Estates and Management",
+   "agent_phone": "0117 463 2043",
+   "first_seen": "2026-11-13T21:30:37+00:00"
+  },
+  "AccommodationForStudents:330527": {
+   "source": "AccommodationForStudents",
+   "id": "330527",
+   "url": "https://www.accommodationforstudents.com/property/330527-5-bed-flat-southville-bristol",
+   "beds": 5,
+   "pppw": 216.0,
+   "bills_included": true,
+   "address": "Jacobs Wells Road, Southville",
+   "walk_min": 13,
+   "note": "tenancy from 04 Sep 2027",
+   "bathrooms": 5,
+   "image": "https://afs-property-images-prod.s3.eu-west-2.amazonaws.com/protected/eu-west-2%3A36b3328b-bd6c-4abb-95d1-4d6fd2c7ce4e/0-1794589446880.jpg",
+   "agent": "Rengen Lettings",
+   "agent_phone": "",
+   "first_seen": "2026-11-13T21:30:37+00:00"
+  },
+  "UniHomes:1505840045": {
+   "source": "UniHomes",
+   "id": "1505840045",
+   "url": "https://www.unihomes.co.uk/property/1505840045/bristol/redland/5-bedroom-student-house/chandos-road",
+   "beds": 5,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "Chandos Road, Redland",
+   "walk_min": null,
+   "note": "available from 9th jul 2027",
+   "bathrooms": 2,
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/1505840045/5-bedroom-student-apartment-in-redland-bristol_1505840045-2-1ka.jpg",
+   "agent": "UniHomes",
+   "agent_phone": "",
+   "first_seen": "2026-11-13T21:30:37+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
