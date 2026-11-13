@@ -293,7 +293,8 @@
   "Rightmove:18968489": "2026-11-12T19:14:19+00:00",
   "Rightmove:95407512": "2026-11-12T19:14:19+00:00",
   "UniHomes:877134350": "2026-11-12T19:14:19+00:00",
-  "UniHomes:905824128": "2026-11-13T07:11:07+00:00"
+  "UniHomes:905824128": "2026-11-13T07:11:07+00:00",
+  "Rightmove:95448486": "2026-11-13T15:25:23+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1896,7 +1897,7 @@
    "bills_included": false,
    "address": "5 bedroom Semi Detached Flat in Clifton",
    "walk_min": 11,
-   "note": "available 08 Jul 2027",
+   "note": "available 06 Aug 2027",
    "bathrooms": 3,
    "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/1cdb1645a/95323182/1cdb1645a974ee4d367ae5384c184cba_max_476x317.jpeg",
    "agent": "Flatline Letting and Property Management",
@@ -2222,6 +2223,22 @@
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-13T07:11:07+00:00"
+  },
+  "Rightmove:95448486": {
+   "source": "Rightmove",
+   "id": "95448486",
+   "url": "https://www.rightmove.co.uk/properties/95448486",
+   "beds": 5,
+   "pppw": 184.6153846153846,
+   "bills_included": false,
+   "address": "Christina Terrace, Hotwells, Bristol, Bristol City",
+   "walk_min": 24,
+   "note": "available 05 Jul 2027",
+   "bathrooms": 2,
+   "image": "",
+   "agent": "Phoenix Property Company",
+   "agent_phone": "0117 463 0839",
+   "first_seen": "2026-11-13T15:25:23+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
