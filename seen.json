@@ -292,7 +292,8 @@
   "Rightmove:95418915": "2026-11-12T19:14:19+00:00",
   "Rightmove:18968489": "2026-11-12T19:14:19+00:00",
   "Rightmove:95407512": "2026-11-12T19:14:19+00:00",
-  "UniHomes:877134350": "2026-11-12T19:14:19+00:00"
+  "UniHomes:877134350": "2026-11-12T19:14:19+00:00",
+  "UniHomes:905824128": "2026-11-13T07:11:07+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1601,7 +1602,7 @@
   "UniHomes:803610962": {
    "source": "UniHomes",
    "id": "803610962",
-   "url": "https://www.unihomes.co.uk/property/803610962/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
+   "url": "https://unihomes.co.uk/property/803610962/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
    "beds": 5,
    "pppw": 207.0,
    "bills_included": true,
@@ -1609,7 +1610,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1617,7 +1618,7 @@
   "UniHomes:1099912940": {
    "source": "UniHomes",
    "id": "1099912940",
-   "url": "https://www.unihomes.co.uk/property/1099912940/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
+   "url": "https://unihomes.co.uk/property/1099912940/bristol/stokes-croft/5-bedroom-student-house/stokes-croft",
    "beds": 5,
    "pppw": 207.0,
    "bills_included": true,
@@ -1625,7 +1626,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -2205,6 +2206,22 @@
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-12T19:14:19+00:00"
+  },
+  "UniHomes:905824128": {
+   "source": "UniHomes",
+   "id": "905824128",
+   "url": "https://www.unihomes.co.uk/property/905824128/bristol/redland/5-bedroom-student-house/hampton-road",
+   "beds": 5,
+   "pppw": 212.0,
+   "bills_included": true,
+   "address": "Hampton Road, Redland",
+   "walk_min": null,
+   "note": "available from 10th jul 2027",
+   "bathrooms": 3,
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/905824128/5-bedroom-student-house-in-redland-bristol_905824128-2-2ly.jpg",
+   "agent": "UniHomes",
+   "agent_phone": "",
+   "first_seen": "2026-11-13T07:11:07+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
