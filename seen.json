@@ -297,7 +297,8 @@
   "Rightmove:95448486": "2026-11-13T15:25:23+00:00",
   "Rightmove:95211012": "2026-11-13T21:30:37+00:00",
   "AccommodationForStudents:330527": "2026-11-13T21:30:37+00:00",
-  "UniHomes:1505840045": "2026-11-13T21:30:37+00:00"
+  "UniHomes:1505840045": "2026-11-13T21:30:37+00:00",
+  "Rightmove:95471745": "2026-11-14T01:42:35+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1412,7 +1413,7 @@
    "walk_min": null,
    "note": "available from 14th jun 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/d68c70e1-dbd7-4862-8e72-e48c315b5e54.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/d68c70e1-dbd7-4862-8e72-e48c315b5e54.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-02T18:49:00+00:00"
@@ -1441,7 +1442,7 @@
    "walk_min": null,
    "note": "available from 5th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/ef7767a0-f406-426a-9e5b-707d76de5733.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/ef7767a0-f406-426a-9e5b-707d76de5733.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T18:48:41+00:00"
@@ -1582,7 +1583,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/b9c51cca-3fd5-4632-88a1-c6dd01bfdf87.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/b9c51cca-3fd5-4632-88a1-c6dd01bfdf87.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1998,7 +1999,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/2c4c5e3a-a7e2-4ac8-9a92-0e04f104fc7c.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/2c4c5e3a-a7e2-4ac8-9a92-0e04f104fc7c.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -2014,7 +2015,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/3ea278ba-ff10-477b-9b0b-339f19b4ea8f.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/3ea278ba-ff10-477b-9b0b-339f19b4ea8f.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-10T15:41:55+00:00"
@@ -2206,7 +2207,7 @@
    "walk_min": null,
    "note": "available from 14th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/877134350/5-bedroom-student-house-in-redland-bristol_877134350-2-lpy.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/877134350/5-bedroom-student-house-in-redland-bristol_877134350-2-lpy.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-12T19:14:19+00:00"
@@ -2222,7 +2223,7 @@
    "walk_min": null,
    "note": "available from 10th jul 2027",
    "bathrooms": 3,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/905824128/5-bedroom-student-house-in-redland-bristol_905824128-2-2ly.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/905824128/5-bedroom-student-house-in-redland-bristol_905824128-2-2ly.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-13T07:11:07+00:00"
@@ -2286,10 +2287,26 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/1505840045/5-bedroom-student-apartment-in-redland-bristol_1505840045-2-1ka.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/1505840045/5-bedroom-student-apartment-in-redland-bristol_1505840045-2-1ka.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-13T21:30:37+00:00"
+  },
+  "Rightmove:95471745": {
+   "source": "Rightmove",
+   "id": "95471745",
+   "url": "https://www.rightmove.co.uk/properties/95471745",
+   "beds": 5,
+   "pppw": 206.53846153846158,
+   "bills_included": false,
+   "address": "Tyndalls Park Road (Garden Flat), Clifton, Bristol, BS8",
+   "walk_min": 5,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 3,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/cb8e3c704/95471745/cb8e3c704a1c8c27b6ee8799994f1eb6_max_476x317.jpeg",
+   "agent": "Digs",
+   "agent_phone": "0117 463 0400",
+   "first_seen": "2026-11-14T01:42:35+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
