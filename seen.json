@@ -303,7 +303,8 @@
   "Rightmove:63015002": "2026-11-16T19:30:57+00:00",
   "Rightmove:95520222": "2026-11-16T19:30:57+00:00",
   "AccommodationForStudents:330597": "2026-11-16T19:30:57+00:00",
-  "Rightmove:95541384": "2026-11-17T02:36:11+00:00"
+  "Rightmove:95541384": "2026-11-17T02:36:11+00:00",
+  "AccommodationForStudents:305519": "2026-11-17T19:52:57+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1620,7 +1621,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1636,7 +1637,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1888,7 +1889,7 @@
    "beds": 5,
    "pppw": 186.92307692307693,
    "bills_included": false,
-   "address": "5 bedroom Semi Detached Flat in Clifton",
+   "address": "Hall Floor Flat, Alexandra Road, Clifton, BS8",
    "walk_min": 11,
    "note": "available 08 Jul 2027",
    "bathrooms": 3,
@@ -1904,7 +1905,7 @@
    "beds": 5,
    "pppw": 190.38461538461542,
    "bills_included": false,
-   "address": "5 bedroom Semi Detached Flat in Clifton",
+   "address": "Garden Flat, Alexandra Road, Clifton, BS8",
    "walk_min": 11,
    "note": "available 06 Aug 2027",
    "bathrooms": 3,
@@ -2084,7 +2085,7 @@
    "walk_min": null,
    "note": "available from 20th aug 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/1227673484/5-bedroom-student-house-in-st-pauls-bristol_1227673484-3-y9k.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/1227673484/5-bedroom-student-house-in-st-pauls-bristol_1227673484-3-y9k.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-11T16:23:02+00:00"
@@ -2392,6 +2393,22 @@
    "agent": "Digs",
    "agent_phone": "0117 463 0400",
    "first_seen": "2026-11-17T02:36:11+00:00"
+  },
+  "AccommodationForStudents:305519": {
+   "source": "AccommodationForStudents",
+   "id": "305519",
+   "url": "https://www.accommodationforstudents.com/property/305519-5-bed-flat-city-centre-bristol",
+   "beds": 5,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "Clare Street, City Centre",
+   "walk_min": 11,
+   "note": "tenancy from 05 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://campbell-crm.altido.com/clients/campbellproperty-1e56afe4e7fb8508/media/image/14518.jpg",
+   "agent": "Bread and Butter Collective",
+   "agent_phone": "",
+   "first_seen": "2026-11-17T19:52:57+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
