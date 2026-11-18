@@ -305,7 +305,10 @@
   "AccommodationForStudents:330597": "2026-11-16T19:30:57+00:00",
   "Rightmove:95541384": "2026-11-17T02:36:11+00:00",
   "AccommodationForStudents:305519": "2026-11-17T19:52:57+00:00",
-  "Rightmove:70208903": "2026-11-18T10:01:26+00:00"
+  "Rightmove:70208903": "2026-11-18T10:01:26+00:00",
+  "Rightmove:95610354": "2026-11-18T18:48:05+00:00",
+  "AccommodationForStudents:325134": "2026-11-18T18:48:05+00:00",
+  "AccommodationForStudents:290269": "2026-11-18T18:48:05+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1449,7 +1452,7 @@
    "walk_min": null,
    "note": "available from 5th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/ef7767a0-f406-426a-9e5b-707d76de5733.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/ef7767a0-f406-426a-9e5b-707d76de5733.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T18:48:41+00:00"
@@ -1622,7 +1625,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/fbd344ca-9176-4ad4-9cfa-4916f5694908.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1638,7 +1641,7 @@
    "walk_min": null,
    "note": "available from 6th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/d2a03c28-d2f7-4fc7-b0f8-a601541a3a9b.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -2230,7 +2233,7 @@
    "walk_min": null,
    "note": "available from 10th jul 2027",
    "bathrooms": 3,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/905824128/5-bedroom-student-house-in-redland-bristol_905824128-2-k8k.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/905824128/5-bedroom-student-house-in-redland-bristol_905824128-2-k8k.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-13T07:11:07+00:00"
@@ -2294,7 +2297,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/1505840045/5-bedroom-student-apartment-in-redland-bristol_1505840045-2-1ka.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/1505840045/5-bedroom-student-apartment-in-redland-bristol_1505840045-2-1ka.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-13T21:30:37+00:00"
@@ -2426,6 +2429,54 @@
    "agent": "Flats4Students",
    "agent_phone": "0117 463 2310",
    "first_seen": "2026-11-18T10:01:26+00:00"
+  },
+  "Rightmove:95610354": {
+   "source": "Rightmove",
+   "id": "95610354",
+   "url": "https://www.rightmove.co.uk/properties/95610354",
+   "beds": 5,
+   "pppw": 180.00000000000003,
+   "bills_included": false,
+   "address": "Cheltenham Road, Bristol, BS6",
+   "walk_min": 23,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/317f7541c/95610354/317f7541c02a7209b46ddcd2a700543c_max_476x317.jpeg",
+   "agent": "OpenRent",
+   "agent_phone": "020 3322 3265",
+   "first_seen": "2026-11-18T18:48:05+00:00"
+  },
+  "AccommodationForStudents:325134": {
+   "source": "AccommodationForStudents",
+   "id": "325134",
+   "url": "https://www.accommodationforstudents.com/property/325134-5-bed-flat-cotham-bristol",
+   "beds": 5,
+   "pppw": 225.0,
+   "bills_included": true,
+   "address": "Cheltenham Road, Cotham",
+   "walk_min": 21,
+   "note": "tenancy from 01 Jul 2027",
+   "bathrooms": 5,
+   "image": "https://afs-property-images-prod.s3.eu-west-2.amazonaws.com/protected/eu-west-2%3A45f1bd65-ff2c-c581-1d2d-34bb6fc67789/9-1794920756549.jpg",
+   "agent": "base",
+   "agent_phone": "",
+   "first_seen": "2026-11-18T18:48:05+00:00"
+  },
+  "AccommodationForStudents:290269": {
+   "source": "AccommodationForStudents",
+   "id": "290269",
+   "url": "https://www.accommodationforstudents.com/property/290269-5-bed-flat-city-centre-bristol",
+   "beds": 5,
+   "pppw": 205.0,
+   "bills_included": true,
+   "address": "St. Nicholas Street, City Centre",
+   "walk_min": 13,
+   "note": "tenancy from 07 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://afs-property-images-prod.s3.eu-west-2.amazonaws.com/protected/eu-west-2%3A45f1bd65-ff2c-c581-1d2d-34bb6fc67789/0-1747235133165.jpg",
+   "agent": "base",
+   "agent_phone": "",
+   "first_seen": "2026-11-18T18:48:05+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
