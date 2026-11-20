@@ -319,7 +319,8 @@
   "UniHomes:1081092620": "2026-11-19T17:19:37+00:00",
   "Rightmove:52611996": "2026-11-19T23:40:55+00:00",
   "Rightmove:18916934": "2026-11-19T23:40:55+00:00",
-  "Rightmove:19066793": "2026-11-19T23:40:55+00:00"
+  "Rightmove:19066793": "2026-11-19T23:40:55+00:00",
+  "Rightmove:95673843": "2026-11-20T04:20:44+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -1463,7 +1464,7 @@
    "walk_min": null,
    "note": "available from 5th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/ef7767a0-f406-426a-9e5b-707d76de5733.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/ef7767a0-f406-426a-9e5b-707d76de5733.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T18:48:41+00:00"
@@ -1604,7 +1605,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/b9c51cca-3fd5-4632-88a1-c6dd01bfdf87.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/b9c51cca-3fd5-4632-88a1-c6dd01bfdf87.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T13:01:41+00:00"
@@ -1620,7 +1621,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/8022bbca-feeb-4e73-aa79-dd226d4aeecc.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/8022bbca-feeb-4e73-aa79-dd226d4aeecc.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T18:48:41+00:00"
@@ -2036,7 +2037,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/3ea278ba-ff10-477b-9b0b-339f19b4ea8f.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/3ea278ba-ff10-477b-9b0b-339f19b4ea8f.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-10T15:41:55+00:00"
@@ -2052,7 +2053,7 @@
    "walk_min": null,
    "note": "available from 9th jul 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/f89544c6-1115-4906-a8dd-ff63314a0694.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/f89544c6-1115-4906-a8dd-ff63314a0694.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-10-28T18:48:41+00:00"
@@ -2100,7 +2101,7 @@
    "walk_min": null,
    "note": "available from 20th aug 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/property/1227673484/5-bedroom-student-house-in-st-pauls-bristol_1227673484-3-y9k.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/1227673484/5-bedroom-student-house-in-st-pauls-bristol_1227673484-3-y9k.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-11T16:23:02+00:00"
@@ -2612,7 +2613,7 @@
    "walk_min": null,
    "note": "available from 23rd jun 2027",
    "bathrooms": 2,
-   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/temp-images/ccbf2d5b-5900-44d0-ad4b-983822137b2b.jpg",
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=90/https://cdn-p1.unihomes.co.uk/temp-images/ccbf2d5b-5900-44d0-ad4b-983822137b2b.jpg",
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-19T17:19:37+00:00"
@@ -2664,6 +2665,22 @@
    "agent": "PJ Reynolds",
    "agent_phone": "0117 915 9700",
    "first_seen": "2026-11-19T23:40:55+00:00"
+  },
+  "Rightmove:95673843": {
+   "source": "Rightmove",
+   "id": "95673843",
+   "url": "https://www.rightmove.co.uk/properties/95673843",
+   "beds": 5,
+   "pppw": 173.0769230769231,
+   "bills_included": false,
+   "address": "7-12 Triangle South, Clifton, Bristol, BS8",
+   "walk_min": 7,
+   "note": "available 16 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/6339ecbd5/95673843/6339ecbd5ee79e11e0e8ae1b7f93d639_max_476x317.jpeg",
+   "agent": "Digs",
+   "agent_phone": "0117 463 0400",
+   "first_seen": "2026-11-20T04:20:44+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
