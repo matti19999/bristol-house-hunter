@@ -326,7 +326,9 @@
   "UniHomes:737516382": "2026-11-20T13:17:01+00:00",
   "Rightmove:95705373": "2026-11-20T21:21:19+00:00",
   "Rightmove:95704902": "2026-11-20T21:21:19+00:00",
-  "UniHomes:510494931": "2026-11-20T21:21:19+00:00"
+  "UniHomes:510494931": "2026-11-20T21:21:19+00:00",
+  "Rightmove:95713140": "2026-11-21T02:36:47+00:00",
+  "Rightmove:95713131": "2026-11-21T02:36:47+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -2783,6 +2785,38 @@
    "agent": "UniHomes",
    "agent_phone": "",
    "first_seen": "2026-11-20T21:21:19+00:00"
+  },
+  "Rightmove:95713140": {
+   "source": "Rightmove",
+   "id": "95713140",
+   "url": "https://www.rightmove.co.uk/properties/95713140",
+   "beds": 5,
+   "pppw": 165.46153846153848,
+   "bills_included": true,
+   "address": "Cromwell Road - 5 bed, St Andrews, South West, BS6",
+   "walk_min": 23,
+   "note": "available 05 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/9c7fc9e98/95713140/9c7fc9e98361db2e9ff4dd5d25b87f22_max_476x317.png",
+   "agent": "PURPLE FROG ASSET MANAGEMENT LIMITED",
+   "agent_phone": "0117 463 8840",
+   "first_seen": "2026-11-21T02:36:47+00:00"
+  },
+  "Rightmove:95713131": {
+   "source": "Rightmove",
+   "id": "95713131",
+   "url": "https://www.rightmove.co.uk/properties/95713131",
+   "beds": 5,
+   "pppw": 192.92307692307693,
+   "bills_included": true,
+   "address": "Cromwell Road - Copy, St Andrews, South West, BS6",
+   "walk_min": 23,
+   "note": "available 05 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/9c7fc9e98/95713131/9c7fc9e98361db2e9ff4dd5d25b87f22_max_476x317.png",
+   "agent": "PURPLE FROG ASSET MANAGEMENT LIMITED",
+   "agent_phone": "0117 463 8840",
+   "first_seen": "2026-11-21T02:36:47+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
