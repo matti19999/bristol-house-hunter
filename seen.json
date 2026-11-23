@@ -328,7 +328,8 @@
   "Rightmove:95704902": "2026-11-20T21:21:19+00:00",
   "UniHomes:510494931": "2026-11-20T21:21:19+00:00",
   "Rightmove:95713140": "2026-11-21T02:36:47+00:00",
-  "Rightmove:95713131": "2026-11-21T02:36:47+00:00"
+  "Rightmove:95713131": "2026-11-21T02:36:47+00:00",
+  "Rightmove:95755278": "2026-11-23T14:24:49+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -2525,7 +2526,7 @@
    "walk_min": 14,
    "note": "available 01 Jul 2027",
    "bathrooms": 2,
-   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/ffdc022e8/95631636/ffdc022e81163479a7b30223d61c920b_max_476x317.jpeg",
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/c7d81c379/95631636/c7d81c379a2fd781cb993de4f1ec62a1_max_476x317.jpeg",
    "agent": "Digs",
    "agent_phone": "0117 463 0400",
    "first_seen": "2026-11-19T08:03:09+00:00"
@@ -2817,6 +2818,22 @@
    "agent": "PURPLE FROG ASSET MANAGEMENT LIMITED",
    "agent_phone": "0117 463 8840",
    "first_seen": "2026-11-21T02:36:47+00:00"
+  },
+  "Rightmove:95755278": {
+   "source": "Rightmove",
+   "id": "95755278",
+   "url": "https://www.rightmove.co.uk/properties/95755278",
+   "beds": 5,
+   "pppw": 204.23076923076923,
+   "bills_included": false,
+   "address": "Lower Maisonette, Ravenswood Road, Redland, BS6   (Ref:413)",
+   "walk_min": 14,
+   "note": "available 16 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/20e85894a/95755278/20e85894a2263c501fafeeeb04ef2f12_max_476x317.jpeg",
+   "agent": "Flatline Letting and Property Management",
+   "agent_phone": "0117 463 1281",
+   "first_seen": "2026-11-23T14:24:49+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
