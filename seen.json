@@ -329,7 +329,10 @@
   "UniHomes:510494931": "2026-11-20T21:21:19+00:00",
   "Rightmove:95713140": "2026-11-21T02:36:47+00:00",
   "Rightmove:95713131": "2026-11-21T02:36:47+00:00",
-  "Rightmove:95755278": "2026-11-23T14:24:49+00:00"
+  "Rightmove:95755278": "2026-11-23T14:24:49+00:00",
+  "Rightmove:95764383": "2026-11-24T01:48:11+00:00",
+  "Rightmove:95759646": "2026-11-24T01:48:11+00:00",
+  "UniHomes:1750353333": "2026-11-24T01:48:11+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -2834,6 +2837,54 @@
    "agent": "Flatline Letting and Property Management",
    "agent_phone": "0117 463 1281",
    "first_seen": "2026-11-23T14:24:49+00:00"
+  },
+  "Rightmove:95764383": {
+   "source": "Rightmove",
+   "id": "95764383",
+   "url": "https://www.rightmove.co.uk/properties/95764383",
+   "beds": 5,
+   "pppw": 173.0769230769231,
+   "bills_included": false,
+   "address": "Cotham Hill, Bristol, Somerset, BS6",
+   "walk_min": 11,
+   "note": "available 01 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/a02c9f8a7/95764383/a02c9f8a7a24d54de5a35d68b6b08ebe_max_476x317.jpeg",
+   "agent": "Romans",
+   "agent_phone": "0117 463 6503",
+   "first_seen": "2026-11-24T01:48:11+00:00"
+  },
+  "Rightmove:95759646": {
+   "source": "Rightmove",
+   "id": "95759646",
+   "url": "https://www.rightmove.co.uk/properties/95759646",
+   "beds": 5,
+   "pppw": 138.46153846153848,
+   "bills_included": false,
+   "address": "St. Stephens Street, Bristol, BS1",
+   "walk_min": 10,
+   "note": "available 17 Jun 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/6ab5ee73b/95759646/6ab5ee73b0921b268262c4ab82c69425_max_476x317.jpeg",
+   "agent": "Aspire To Move Ltd",
+   "agent_phone": "01225 444333",
+   "first_seen": "2026-11-24T01:48:11+00:00"
+  },
+  "UniHomes:1750353333": {
+   "source": "UniHomes",
+   "id": "1750353333",
+   "url": "https://www.unihomes.co.uk/property/1750353333/bristol/city-centre/5-bedroom-student-house/9-11-st-stephens-street",
+   "beds": 5,
+   "pppw": 164.0,
+   "bills_included": true,
+   "address": "9-11 St. Stephens Street, City Centre",
+   "walk_min": null,
+   "note": "available from 17th jun 2027",
+   "bathrooms": 2,
+   "image": "https://www.unihomes.co.uk/cdn-cgi/image/width=390,dpr=1,format=auto,quality=75/https://cdn-p1.unihomes.co.uk/property/1750353333/5-bedroom-student-apartment-in-city-centre-bristol_1750353333-2-vfq.jpg",
+   "agent": "UniHomes",
+   "agent_phone": "",
+   "first_seen": "2026-11-24T01:48:11+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
