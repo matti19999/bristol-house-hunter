@@ -336,7 +336,8 @@
   "Rightmove:95821533": "2026-11-25T04:32:59+00:00",
   "Rightmove:95840148": "2026-11-25T14:53:46+00:00",
   "Rightmove:95833002": "2026-11-25T14:53:46+00:00",
-  "Rightmove:95826264": "2026-11-25T14:53:46+00:00"
+  "Rightmove:95826264": "2026-11-25T14:53:46+00:00",
+  "Rightmove:95861496": "2026-11-26T05:23:51+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -2953,6 +2954,22 @@
    "agent": "Hopewell",
    "agent_phone": "0117 463 0268",
    "first_seen": "2026-11-25T14:53:46+00:00"
+  },
+  "Rightmove:95861496": {
+   "source": "Rightmove",
+   "id": "95861496",
+   "url": "https://www.rightmove.co.uk/properties/95861496",
+   "beds": 5,
+   "pppw": 167.30769230769232,
+   "bills_included": false,
+   "address": "Broad Quay, City Centre, Bristol, BS1",
+   "walk_min": 12,
+   "note": "available 16 Jun 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/18af612e6/95861496/18af612e6f348ed2c20a4166639394ca_max_476x317.jpeg",
+   "agent": "Digs",
+   "agent_phone": "0117 463 0400",
+   "first_seen": "2026-11-26T05:23:51+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
