@@ -338,7 +338,8 @@
   "Rightmove:95833002": "2026-11-25T14:53:46+00:00",
   "Rightmove:95826264": "2026-11-25T14:53:46+00:00",
   "Rightmove:95861496": "2026-11-26T05:23:51+00:00",
-  "Rightmove:95866065": "2026-11-26T15:34:43+00:00"
+  "Rightmove:95866065": "2026-11-26T15:34:43+00:00",
+  "Rightmove:95895159": "2026-11-26T23:59:58+00:00"
  },
  "failures": {
   "Rightmove": 0,
@@ -2987,6 +2988,22 @@
    "agent": "Bristol Student Lets",
    "agent_phone": "0118 230 8893",
    "first_seen": "2026-11-26T15:34:43+00:00"
+  },
+  "Rightmove:95895159": {
+   "source": "Rightmove",
+   "id": "95895159",
+   "url": "https://www.rightmove.co.uk/properties/95895159",
+   "beds": 5,
+   "pppw": 173.0769230769231,
+   "bills_included": true,
+   "address": "1A-5A Whitson Street, Bristol, BS1",
+   "walk_min": 11,
+   "note": "available 09 Jul 2027",
+   "bathrooms": 2,
+   "image": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/property-photo/25d7142a8/95895159/25d7142a8bfc65a00c9981122b9bbc54_max_476x317.jpeg",
+   "agent": "Xeno Property",
+   "agent_phone": "0117 463 3298",
+   "first_seen": "2026-11-26T23:59:58+00:00"
   }
  },
  "search": "[{\"bedrooms\": [5], \"min_bathrooms\": 2}, {\"max_pppw\": 210, \"max_pppw_bills_included\": 225}, {\"from_date\": \"2027-06-01\"}, 25]",
